@@ -128,9 +128,6 @@
             };
             itemNum++;
         };
-        if (skinsByCreatorArray[0] == undefined) {
-            skinsByCreatorArray = `They are no skins made by ${creator}.`
-        };
         return skinsByCreatorArray
     };
     function findSkins() {
@@ -146,7 +143,10 @@
             while (skinsElement.hasChildNodes()) {  
                 skinsElement.removeChild(skinsElement.firstChild);
             }
-            itemNum = 0;
+            if (krunkerSkins[0] == undefined) {
+            document.getElementById("author").innerHTML = `They are no skins made by ${input}.`;
+            } else {
+                itemNum = 0;
             while (itemNum < arrayLength) {
                 var p = document.createElement("p");
                 var text = document.createTextNode(krunkerSkins[itemNum]);
@@ -157,7 +157,7 @@
             }
             document.getElementById("author").innerHTML = `Skins made by ${input}:`;
 
-        }
+        }}
 
 </script>
 
