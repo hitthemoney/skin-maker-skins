@@ -77,53 +77,20 @@
         var creator4 = creator;
         var skinsByCreatorObj;
         var skinCreator;
-        
-        if (creator == "Krunker.io") {creator1 = "Krunker.io"} else if (creator == "krunker.io") {creator1 = "Krunker.io"} else if (creator == "KRUNKER.IO") {creator1 = "Krunker.io"} else if (creator == "Krunker") {creator1 = "Krunker.io"} else if (creator == "krunker") {creator1 = "Krunker.io"} else if (creator == "KRUNKER") {creator1 = "Krunker.io"}
-        else if (creator == "floatingpoint") {creator1 = "floatingpoint"; creator2 = "Floatingpoint"} else if (creator == "Floatingpoint") {creator1 = "floatingpoint"; creator2 = "Floatingpoint"} else if (creator == "FLOATINGPOINT") {creator1 = "floatingpoint"; creator2 = "Floatingpoint"} else if (creator == "float") {creator1 = "floatingpoint"; creator2 = "Floatingpoint"} else if (creator == "Float") {creator1 = "floatingpoint"; creator2 = "Floatingpoint"} else if (creator == "FLOAT") {creator1 = "floatingpoint"; creator2 = "Floatingpoint"}
-        else if (creator == "cimota") {creator1 = "cimota"; creator2 = "Cimota"} else if (creator == "Cimota") {creator1 = "cimota"; creator2 = "Cimota"} else if (creator == "CIMOTA") {creator1 = "cimota"; creator2 = "Cimota"}
-        else if (creator == "zino") {creator1 = "Zino"; creator2 = "Zinoob"} else if (creator == "Zino") {creator1 = "Zino"; creator2 = "Zinoob"} else if (creator == "ZINO") {creator1 = "Zino"; creator2 = "Zinoob"} else if (creator == "ZINOOB") {creator1 = "Zino"; creator2 = "Zinoob"} else if (creator == "zinoob") {creator1 = "Zino"; creator2 = "Zinoob"} else if (creator == "Zinoob") {creator1 = "Zino"; creator2 = "Zinoob"}
-        else if (creator == "0mar") {creator1 = "0mar"} else if (creator == "0MAR") {creator1 = "0mar"} else if (creator == "OMAR") {creator1 = "0mar"} else if (creator == "Omar") {creator1 = "0mar"} else if (creator == "omar") {creator1 = "0mar"}
-        else if (creator == "Kitter") {creator1 = "Kitter"; creator2 = "kitter"; creator3 = "Kltter"; creator4 = "k1tter"} else if (creator == "kitter") {creator1 = "Kitter"; creator2 = "kitter"; creator3 = "Kltter"; creator4 = "k1tter"} else if (creator == "KITTER") {creator1 = "Kitter"; creator2 = "kitter"; creator3 = "Kltter"; creator4 = "k1tter"} else if (creator == "Kltter") {creator1 = "Kitter"; creator2 = "kitter"; creator3 = "Kltter"; creator4 = "k1tter"} else if (creator == "kltter") {creator1 = "Kitter"; creator2 = "kitter"; creator3 = "Kltter"; creator4 = "k1tter"} else if (creator == "KLTTER") {creator1 = "Kitter"; creator2 = "kitter"; creator3 = "Kltter"; creator4 = "k1tter"}
-        else if (creator == "Jytesh") {creator1 = "Jytesh"; creator2 = "jytesh"} else if (creator == "JYTESH") {creator1 = "jytesh"; creator2 = "Jytesh"} else if (creator == "jytesh") {creator1 = "jytesh"; creator2 = "Jytesh"}
-        else if (creator == "nightly-build7") {creator1 = "nightly-build7"} else if (creator == "NIGHTLY-BUILD7") {creator1 = "nightly-build7"} else if (creator == "Nightly-Build7") {creator1 = "nightly-build7"} else if (creator == "nightlybuild") {creator1 = "nightly-build7"} else if (creator == "Nightlybuild") {creator1 = "nightly-build7"} else if (creator == "NIGHTLYBUILD") {creator1 = "nightly-build7"}
-        else if (creator == "Hoodgail") {creator1 = "Hoodgail"} else if (creator == "hoodgail") {creator1 = "Hoodgail"} else if (creator == "HOODGAIL") {creator1 = "Hoodgail"}
-        else if (creator == "jonschmiddy") {creator1 = "jonschmiddy"} else if (creator == "Jonschmiddy") {creator1 = "jonschmiddy"} else if (creator == "JONSCHMIDDY") {creator1 = "jonschmiddy"} else if (creator == "jon") {creator1 = "jonschmiddy"} else if (creator == "JON") {creator1 = "jonschmiddy"} else if (creator == "Jon") {creator1 = "jonschmiddy"}
-        else if (creator == "CyAnIdE") {creator1 = "CyAnIdE"; creator2 = "Cyanide"} else if (creator == "CYANIDE") {creator1 = "CyAnIdE"; creator2 = "Cyanide"} else if (creator == "Cyanide") {creator1 = "CyAnIdE"; creator2 = "Cyanide"} else if (creator == "cyanide") {creator1 = "CyAnIdE"; creator2 = "Cyanide"}
-        else if (creator == "Nxbulah") {creator1 = "Nxbulah"} else if (creator == "nxbulah") {creator1 = "Nxbulah"} else if (creator == "NXBULAH") {creator1 = "Nxbulah"}
-        else if (creator == "FlowerKid") {creator1 = "FlowerKid"; creator2 = "Flowerkid"} else if (creator == "flowerkid") {creator1 = "FlowerKid"; creator2 = "Flowerkid"} else if (creator == "Flowerkid") {creator1 = "FlowerKid"; creator2 = "Flowerkid"} else if (creator == "FLOWERKID") {creator1 = "FlowerKid"; creator2 = "Flowerkid"}
-        else if (creator == "Drag") {creator1 = "Drag"} else if (creator == "drag") {creator1 = "Drag"} else if (creator == "DRAG") {creator1 = "Drag"}
-        else if (creator == "Ziggy") {creator1 = "Ziggy"} else if (creator == "ziggy") {creator1 = "Ziggy"} else if (creator == "ZIGGY") {creator1 = "Ziggy"}
-        else if (creator == "Waldo") {creator1 = "Waldo"} else if (creator == "WALDO") {creator1 = "Waldo"} else if (creator == "waldo") {creator1 = "Waldo"}
-        else if (creator == "Leaaf") {creator1 = "Leaaf"} else if (creator == "LEAAF") {creator1 = "Leaaf"} else if (creator == "leaaf") {creator1 = "Leaaf"}
-        else if (creator == "Edibleporg") {creator1 = "Edibleporg"} else if (creator == "edibleporg") {creator1 = "Edibleporg"} else if (creator == "EDIBLEPORG") {creator1 = "Edibleporg"} else if (creator == "porg") {creator1 = "Edibleporg"} else if (creator == "PORG") {creator1 = "Edibleporg"} else if (creator == "Porg") {creator1 = "Edibleporg"}
-        else if (creator == "Jhonxay") {creator1 = "Jhonxay"; creator2 = "Jhonxay_Playz"} else if (creator == "jhonxay") {creator1 = "Jhonxay"; creator2 = "Jhonxay_Playz"} else if (creator == "JHONXAY") {creator1 = "Jhonxay"; creator2 = "Jhonxay_Playz"} else if (creator == "Jhonxay_Playz") {creator1 = "Jhonxay"; creator2 = "Jhonxay_Playz"} else if (creator == "JHONXAY_PLAYZ") {creator1 = "Jhonxay"; creator2 = "Jhonxay_Playz"} else if (creator == "jhonxay_playz") {creator1 = "Jhonxay"; creator2 = "Jhonxay_Playz"}
-        else if (creator == "Vx Bomb") {creator1 = "Vx Bomb"} else if (creator == "vx bomb") {creator1 = "Vx Bomb"} else if (creator == "VX BOMB") {creator1 = "Vx Bomb"} else if (creator == "vx_bomb") {creator1 = "Vx Bomb"} else if (creator == "Vx_Bomb") {creator1 = "Vx Bomb"} else if (creator == "VX_BOMB") {creator1 = "Vx Bomb"} else if (creator == "VX_Bomb") {creator1 = "Vx Bomb"} else if (creator == "Vx_bomb") {creator1 = "Vx Bomb"} else if (creator == "Vxbomb") {creator1 = "Vx Bomb"}
-        else if (creator == "Electrode_") {creator1 = "Electrode_"; creator2 = "Electrode"} else if (creator == "electrode_") {creator1 = "Electrode_"; creator2 = "Electrode"} else if (creator == "ELECTRODE_") {creator1 = "Electrode_"; creator2 = "Electrode"} else if (creator == "Electrode") {creator1 = "Electrode_"; creator2 = "Electrode"} else if (creator == "electrode") {creator1 = "Electrode_"; creator2 = "Electrode"} else if (creator == "ELECTRODE") {creator1 = "Electrode_"; creator2 = "Electrode"}
-        else if (creator == "Blitz-.") {creator1 = "Blitz-."; creator2 = "Blitz"} else if (creator == "blitz-.") {creator1 = "Blitz-."; creator2 = "Blitz"} else if (creator == "BLITZ-.") {creator1 = "Blitz-."; creator2 = "Blitz"} else if (creator == "Blitz") {creator1 = "Blitz-."; creator2 = "Blitz"} else if (creator == "blitz") {creator1 = "Blitz-."; creator2 = "Blitz"} else if (creator == "BLITZ") {creator1 = "Blitz-."; creator2 = "Blitz"}
-        else if (creator == "Gnnr") {creator1 = "Gnnr"} else if (creator == "GNNR") {creator1 = "Gnnr"} else if (creator == "gnnr") {creator1 = "Gnnr"}
-        else if (creator == "Graham") {creator1 = "Graham"} else if (creator == "GRAHAM") {creator1 = "Graham"} else if (creator == "graham") {creator1 = "Graham"} 
-        else if (creator == "Rengar") {creator1 = "Rengar"} else if (creator == "rengar") {creator1 = "Rengar"} else if (creator == "RENGAR") {creator1 = "Rengar"}    
-        else if (creator == "Subza") {creator1 = "Subza"} else if (creator == "subza") {creator1 = "Subza"} else if (creator == "SUBZA") {creator1 = "Subza"}
-        else if (creator == "AtarSt") {creator1 = "AtarSt"} else if (creator == "ATARST") {creator1 = "AtarSt"} else if (creator == "atarst") {creator1 = "AtarSt"}
-        else if (creator == "Halloluke0201") {creator1 = "Halloluke0201"} else if (creator == "halloluke0201") {creator1 = "Halloluke0201"} else if (creator == "HALLOLUKE0201") {creator1 = "Halloluke0201"} else if (creator == "Halloluke") {creator1 = "Halloluke0201"} else if (creator == "HALLOLUKE") {creator1 = "Halloluke0201"} else if (creator == "halloluke") {creator1 = "Halloluke0201"}
-        else if (creator == "_irizu") {creator1 = "_irizu"} else if (creator == "_Irizu") {creator1 = "_irizu"} else if (creator == "_IRIZU") {creator1 = "_irizu"} else if (creator == "irizu") {creator1 = "_irizu"} else if (creator == "IRIZU") {creator1 = "_irizu"} else if (creator == "Irizu") {creator1 = "_irizu"}
-        else if (creator == "iSpy") {creator1 = "iSpy"} else if (creator == "ispy") {creator1 = "iSpy"} else if (creator == "ISPY") {creator1 = "iSpy"} else if (creator == "spy") {creator1 = "iSpy"} else if (creator == "Spy") {creator1 = "iSpy"} else if (creator == "SPY") {creator1 = "iSpy"} else if (creator == "Ispy") {creator1 = "iSpy"} else if (creator == "ISpy") {creator1 = "iSpy"}
-        else if (creator == "Lxckless") {creator1 = "Lxckless"} else if (creator == "lxckless") {creator1 = "Lxckless"} else if (creator == "LXCKLESS") {creator1 = "Lxckless"};
-        
+
+        var lowcCreator = creator.toLowerCase()
+        if (lowcCreator == "krunker") {creator1 =  "krunker.io"} else if (lowcCreator == "jon") {creator1 = "jonschmiddy"} else if(lowcCreator == "spy") {creator1 = "ispy"} else if (lowcCreator == "blitz") {creator1 = "blitz-."; creator2 = "blitz"} else if (lowcCreator == "blitz-.") {creator1 = "blitz-."; creator2 = "blitz"} else if (lowcCreator == "halloluke") {creator1 = "halloluke"} else if (lowcCreator == "irizu") {creator1 = "_irizu"} else if (lowcCreator == "vx bomb") {creator1 = "vx_bomb"} else if (lowcCreator == "electrode") {creator1 = "electrode"; creator2 = "electrode_"} else if (lowcCreator == "electrode_") {creator1 = "electrode"; creator2 = "electrode_"} else if (lowcCreator == "float") {creator1 = "floatingpoint"} else if (lowcCreator == "kltter") {creator1 = "kitter"; creator2 = "kltter"} else if (lowcCreator == "kitter") {creator1 = "kitter"; creator2 = "kltter"} else if (lowcCreator == "zino") {creator1 = "zino"; creator2 = "zinoob"} else if (lowcCreator == "zinoob") {creator1 = "zino"; creator2 = "zinoob"} else if (lowcCreator == "jhonxay") {creator1 = "jhonxay_playz"; creator2 = "jhonxay"} else if (lowcCreator == "jhonxay_playz") {creator1 = "jhonxay"; creator2 = "jhonxay_playz"} else if (lowcCreator == "omar") {creator1 = "0mar"} else if (lowcCreator == "porg") {creator1 = "edibleporg"} else if (lowcCreator == "nightlybuild") {creator1 = "nightly-build7"}
+         
         while (itemNum < arrayLength) {
             skinCreator = skins[itemNum].creator;
             if (skinCreator == undefined) {
                 skinCreator = "Krunker.io";
             };
-            if (skinCreator == creator) {
+            if (skinCreator.toLowerCase() == lowcCreator) {
                 skinsByCreatorArray.push(skins[itemNum].name);
-            } else if (skinCreator == creator1) {
+            } else if (skinCreator.toLowerCase() == creator1.toLowerCase()) {
                 skinsByCreatorArray.push(skins[itemNum].name);
-            } else if (skinCreator == creator2) {
-                skinsByCreatorArray.push(skins[itemNum].name);
-            } else if (skinCreator == creator3) {
-                skinsByCreatorArray.push(skins[itemNum].name);
-            } else if (skinCreator == creator4) {
+            } else if (skinCreator.toLowerCase() == creator2.toLowerCase()) {
                 skinsByCreatorArray.push(skins[itemNum].name);
             };
             itemNum++;
