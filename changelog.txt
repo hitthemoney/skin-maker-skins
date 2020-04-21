@@ -1,0 +1,15 @@
+Update v1.1.1:
+- Added a changelog
+- Updated UI slightly
+
+Update v1.1.0:
+- Now when you click on a skin, the image for the skin pops up/down
+
+Update v1.0.2:
+- Updated the skin array, with the new krunker update
+
+Update v1.0.1:
+- Made code prettier
+
+Update v1.0.0:
+- Initial Release
