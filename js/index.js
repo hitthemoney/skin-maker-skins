@@ -1,17 +1,61 @@
+async function getVersion() {
+    var version = document.getElementById("version"),
+        changelog = await fetch("https://hitthemoney.github.io/skin-maker-skins/changelog.txt"),
+        changelogText = await changelog.text();
+    version.innerHTML = changelogText.slice(0, 6)
+    //console.log([changelogText, changelogText.slice(0, 6)])
+}
+getVersion();
+
+function stringToBool(string) {
+    if (string == "false") {
+        var boolToReturn = false;
+    } else if (string == "true") {
+        var boolToReturn = true;
+    } else {
+        var boolToReturn = undefined;
+    };
+    return boolToReturn;
+};
+
+var url = new URL(document.URL),
+    creator = url.searchParams.get("creator"),
+    showImg = url.searchParams.get("showImg"),
+    input = document.getElementById("skinmakerName");
+/*varapi = stringToBool(url.searchParams.get("api"));
+if (api == true) {
+    while (document.hasChildNodes()) {
+        document.removeChild(document.firstChild);
+    }
+    document.body.append(document.createElement("text").appendChild(document.createTextNode(`{
+        "creator": ${creator},
+        "skins": ${getSkinsByCreator(creator)}
+    }`)))
+    document.write(`{
+        "creator": ${creator},
+        "skins": ${getSkinsByCreator(creator)}
+    }`)
+
+}*/
+
+if (creator !== null /* && api == false*/ ) {
+    input.value = creator;
+    findSkins(stringToBool(showImg));
+}
+
 function getSkinsByCreator(creator) {
-    var itemNum = 0;
-    var arrayLength = skins.length;
-    var skinsByCreatorArray = [];
-    var creator1 = creator;
-    var creator2 = creator;
+    var itemNum = 0,
+        arrayLength = skins.length,
+        skinsByCreatorArray = [],
+        creator1 = creator,
+        creator2 = creator;
     /*var skinsByCreatorObj = [{
         "skins": []
     }, {
         "url": []
     }]*/
-    var skinCreator;
-
-    var lowcCreator = creator.toLowerCase()
+    var skinCreator,
+        lowcCreator = creator.toLowerCase();
     if (lowcCreator == "krunker") {
         creator1 = "krunker.io"
     } else if (lowcCreator == "jon") {
@@ -86,8 +130,6 @@ function getUrlBySkinName(name) {
     var arrayLength = skins.length;
     var skinInfoArray = []
     var url;
-    //var id;
-    //var tex;
     var lowcName = name.toLowerCase();
     var itemType;
     while (itemNum < arrayLength) {
@@ -166,9 +208,8 @@ function getUrlBySkinName(name) {
     return url;
 }
 
-function findSkins() {
-    var input = document.getElementById("skinmakerName").value;
-    var krunkerSkins = getSkinsByCreator(input);
+function findSkins(showImg) {
+    var krunkerSkins = getSkinsByCreator(input.value);
     var itemNum = 0;
     var arrayLength = krunkerSkins.length;
     var authorElement = document.getElementById("author");
@@ -180,12 +221,11 @@ function findSkins() {
         skinsElement.removeChild(skinsElement.firstChild);
     }
     if (krunkerSkins[0] == undefined) {
-        document.getElementById("author").innerHTML = `They are no skins made by ${input}.`;
+        document.getElementById("author").innerHTML = `They are no skins made by ${input.value}.`;
     } else {
         itemNum = 0;
         while (itemNum < arrayLength) {
             var element = document.getElementById("skins");
-            //var a = document.createElement("a");
             var img = document.createElement("img");
             var p = document.createElement("p");
             var text = document.createTextNode(krunkerSkins[itemNum]);
@@ -198,13 +238,15 @@ function findSkins() {
                 showImage(this.id);
             });
             img.id = imgId;
-            img.style.display = "none"
+            if (showImg !== true) {
+                img.style.display = "none"
+            }
             img.src = getUrlBySkinName(krunkerSkins[itemNum]);
             element.appendChild(p);
             element.appendChild(img);
             itemNum++;
         }
-        document.getElementById("author").innerHTML = `Skins made by ${input}:`;
+        document.getElementById("author").innerHTML = `Skins made by ${input.value}:`;
 
     }
 }
