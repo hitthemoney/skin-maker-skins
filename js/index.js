@@ -3,9 +3,7 @@ async function getVersion() {
         changelog = await fetch("https://hitthemoney.github.io/skin-maker-skins/changelog.txt"),
         changelogText = await changelog.text();
     version.innerHTML = changelogText.slice(0, 6)
-    //console.log([changelogText, changelogText.slice(0, 6)])
 }
-getVersion();
 
 function stringToBool(string) {
     if (string == "false") {
@@ -18,29 +16,17 @@ function stringToBool(string) {
     return boolToReturn;
 };
 
-var url = new URL(document.URL),
-    creator = url.searchParams.get("creator"),
-    showImg = url.searchParams.get("showImg"),
-    input = document.getElementById("skinmakerName");
-/*varapi = stringToBool(url.searchParams.get("api"));
-if (api == true) {
-    while (document.hasChildNodes()) {
-        document.removeChild(document.firstChild);
+function startUp() {
+    getVersion();
+    this.url = new URL(document.URL);
+    this.creator = url.searchParams.get("creator");
+    this.showImg = url.searchParams.get("showImg");
+    this.input = document.getElementById("skinmakerName");
+
+    if (creator !== null) {
+        input.value = creator;
+        findSkins(stringToBool(showImg));
     }
-    document.body.append(document.createElement("text").appendChild(document.createTextNode(`{
-        "creator": ${creator},
-        "skins": ${getSkinsByCreator(creator)}
-    }`)))
-    document.write(`{
-        "creator": ${creator},
-        "skins": ${getSkinsByCreator(creator)}
-    }`)
-
-}*/
-
-if (creator !== null /* && api == false*/ ) {
-    input.value = creator;
-    findSkins(stringToBool(showImg));
 }
 
 function getSkinsByCreator(creator) {
@@ -49,11 +35,6 @@ function getSkinsByCreator(creator) {
         skinsByCreatorArray = [],
         creator1 = creator,
         creator2 = creator;
-    /*var skinsByCreatorObj = [{
-        "skins": []
-    }, {
-        "url": []
-    }]*/
     var skinCreator,
         lowcCreator = creator.toLowerCase();
     if (lowcCreator == "krunker") {
