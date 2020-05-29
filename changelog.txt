@@ -4,7 +4,7 @@ Working on:
 - Saving the canvas as PNG and SVG (not just SVG)
 
 Update v1.1.3:
-- Added a canvas link (currently it is https://hitthemoney.github.io/skin-maker-skins/canavs?creator=)
+- Added a canvas link (currently it is https://hitthemoney.github.io/skin-maker-skins/canvas?creator=)
 
 Update v1.1.2:
 - Added search parameters to the url
