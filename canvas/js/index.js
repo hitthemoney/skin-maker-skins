@@ -81,20 +81,32 @@ function svgToImg(svg2) {
 
     var svgData = new XMLSerializer().serializeToString(svg2);
 
+    var canvas = document.createElement("canvas");
+    canvas.width = 800;
+    canvas.height = 530;
+    var ctx = canvas.getContext("2d");
+
     var img = document.createElement("img");
     img.setAttribute("src", "data:image/svg+xml;base64," + btoa(svgData));
 
     img.onload = function () {
+        ctx.drawImage(img, 0, 0);
+        pngLink = canvas.toDataURL( "image/png" );
         let imgSrcElem = document.getElementsByClassName("imgSrc")
         for (num = 0; num < imgSrcElem.length; num++) imgSrcElem[num]["content"] = img.src
         document.getElementById("input").value = img.src;
-        document.getElementById("downloadImg").download = img.src;
-        document.getElementById("downloadImg").href = img.src;
+        document.getElementById("downloadSvg").download = `Skins_by_${creator}.SVG`;
+        document.getElementById("downloadSvg").href = img.src;
+
+        document.getElementById("input2").value = pngLink;
+        document.getElementById("downloadPng").download = `Skins_by_${creator}.PNG`;
+        document.getElementById("downloadPng").href = pngLink;
+
     };
 }
 
-function copyLink() {
-    let input = document.getElementById("input");
+function copyLink(num) {
+    let input = document.getElementsByTagName("input")[num];
     input.select();
     input.setSelectionRange(0, 99999);
     document.execCommand("copy");
