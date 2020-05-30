@@ -1,4 +1,10 @@
-v1.2.1
+v1.3.0
+
+Update v1.3.0
+- Major UI Update
+- Added canvas download to the main site
+- Still an old UI option
+- Brings you to the skins itemsales when you click on a skin (only on the new UI)
 
 Update v1.2.1:
 - You can now save the canvas as PNG not just SVG

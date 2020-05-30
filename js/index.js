@@ -1,8 +1,28 @@
+function getItemNum(skinName) {
+    let num = 0;
+    const arrayLength = skins.length;
+    let itemNum = 0;
+    while (num < arrayLength) {
+        if (skins[num].name.toLowerCase() === skinName.toLowerCase()) itemNum = num;
+        num++;
+    }
+    if (itemNum === 0 && skinName.toLowerCase() !== 'arctic hunt') return;
+    return itemNum;
+}
+
 async function getVersion() {
     var version = document.getElementById("version"),
         changelog = await fetch("https://hitthemoney.github.io/skin-maker-skins/changelog.txt"),
-        changelogText = await changelog.text();
+        changelogText = await changelog.text(),
+        changelog2 = document.getElementById("changelog")
     version.innerHTML = changelogText.slice(0, 6)
+    changelog2.innerHTML = changelogText
+}
+
+function hidePopup() {
+    clearInterval(this.interval);
+    for (num = 0; num < popups.length; num++) document.getElementById(popups[num] + "Holder").style.display = "none"
+    document.getElementById("popupHolder").style.display = "none"
 }
 
 function stringToBool(string) {
@@ -17,17 +37,19 @@ function stringToBool(string) {
 };
 
 function startUp() {
+    this.formatSelect = document.getElementById("formatSelect");
+    this.popups = ["changelog", "itemsales", "download"];
     getVersion();
     this.url = new URL(document.URL);
     this.creator = url.searchParams.get("creator");
-    this.showImg = url.searchParams.get("showImg");
+    this.showImg = stringToBool(url.searchParams.get("showImg"));
     this.input = document.getElementById("skinmakerName");
 
     if (creator !== null) {
         input.value = creator;
-        findSkins(stringToBool(showImg));
-    }
-}
+        findSkins(showImg, false);
+    };
+};
 
 function getSkinsByCreator(creator) {
     var itemNum = 0,
@@ -187,47 +209,75 @@ function getUrlBySkinName(name) {
         itemNum++;
     };
     return url;
-}
+};
 
-function findSkins(showImg) {
-    var krunkerSkins = getSkinsByCreator(input.value);
-    var itemNum = 0;
-    var arrayLength = krunkerSkins.length;
-    var authorElement = document.getElementById("author");
-    var skinsElement = document.getElementById("skins");
-    if (authorElement.hasChildNodes()) {
-        authorElement.removeChild(authorElement.childNodes[0]);
-    }
-    while (skinsElement.hasChildNodes()) {
-        skinsElement.removeChild(skinsElement.firstChild);
-    }
-    if (krunkerSkins[0] == undefined) {
-        document.getElementById("author").innerHTML = `They are no skins made by ${input.value}.`;
-    } else {
-        itemNum = 0;
-        while (itemNum < arrayLength) {
-            var element = document.getElementById("skins");
-            var img = document.createElement("img");
-            var p = document.createElement("p");
-            var text = document.createTextNode(krunkerSkins[itemNum]);
-            var nullText = document.createTextNode("");
-            p.appendChild(text);
-            var pId = `p${itemNum}`
-            var imgId = `img${itemNum}`
-            p.id = pId
-            p.addEventListener('click', function () {
-                showImage(this.id);
-            });
-            img.id = imgId;
-            if (showImg !== true) {
-                img.style.display = "none"
+function findSkins(showImg, slider) {
+    var element = document.getElementById("skins");
+    var check = document.getElementById("check");
+    var loadMessage = document.getElementById("loadMessage");
+    if (slider == false || element.innerHTML !== "") {
+        let downloadBtn = document.getElementById("downloadBtn");
+        downloadBtn.style.display = "block";
+        loadMessage.style.display = "block";
+        var authorElement = document.getElementById("author");
+        var skinsElement = document.getElementById("skins");
+        if (authorElement.hasChildNodes()) {
+            authorElement.removeChild(authorElement.childNodes[0]);
+        };
+        while (skinsElement.hasChildNodes()) {
+            skinsElement.removeChild(skinsElement.firstChild);
+        };
+        setTimeout(() => {
+            if (slider !== true) {
+                this.krunkerSkins = getSkinsByCreator(input.value);
+            } else {
+                input.value = this.oldAuthor;
+            };
+            downloadBtn.onclick = function () {
+                showDownloadPopup(input.value)
             }
-            img.src = getUrlBySkinName(krunkerSkins[itemNum]);
-            element.appendChild(p);
-            element.appendChild(img);
-            itemNum++;
-        }
-        document.getElementById("author").innerHTML = `Skins made by ${input.value}:`;
+            this.oldAuthor = input.value;
+            var arrayLength = krunkerSkins.length;
+            if (krunkerSkins[0] == undefined) {
+                document.getElementById("author").innerHTML = `They are no skins made by "${input.value}".`;
+            } else {
+                if (check.checked == true) {
+                    for (num = 0; num < arrayLength; num++) {
+                        var img = document.createElement("img");
+                        var p = document.createElement("p");
+                        var text = document.createTextNode(krunkerSkins[num]);
+                        p.appendChild(text);
+                        var pId = `p${num}`
+                        var imgId = `img${num}`
+                        p.id = pId
+                        p.addEventListener('click', function () {
+                            showImage(this.id);
+                        });
+                        img.id = imgId;
+                        if (showImg !== true) {
+                            img.style.display = "none"
+                        }
+                        img.src = getUrlBySkinName(krunkerSkins[num]);
+                        element.appendChild(p);
+                        element.appendChild(img);
+                    }
+                    loadMessage.style.display = "none"
+                    document.getElementById("author").innerHTML = `Skins made by ${input.value}:`;
+                    document.getElementById("author").style = "display: block;font-size: 1.17em;margin-top: 1px;margin-bottom: 15px;"
+                } else if (check.checked == false) {
+                    for (num = 0; num < arrayLength; num++) {
+                        let itemNum = getItemNum(krunkerSkins[num])
+                        let color = rarities[skins[itemNum].rarity].color;
+                        let skinCard = document.createElement("div")
+                        element.append(skinCard)
+                        skinCard.outerHTML = `<div onclick="itemsales('https://krunker.io/social.html?p=itemsales&i=${itemNum}');" class="itemCard" id="i${num}" style="color:${color}; border:5px solid ${color};"><span class="itemText">${krunkerSkins[num]}</span><img draggable="false" class="marketImg" src="${getUrlBySkinName(krunkerSkins[num])}"></div>`
+                    }
+                    document.getElementById("author").innerHTML = `Skins made by ${input.value}:`;
+                    document.getElementById("author").style = "display: block;font-size: 2em;margin-top: 1px; margin-bottom: 15px;"
+                    loadMessage.style.display = "none"
+                }
+            }
+        }, 1);
 
     }
 }
@@ -250,4 +300,87 @@ function hideImage(id) {
     pId.addEventListener('click', function () {
         showImage(this.id);
     });
+}
+
+
+function showChangelog() {
+    let changelogHolder = document.getElementById("changelogHolder");
+    changelogHolder.style.display = "block";
+    document.getElementById("popupHolder").style.display = "block";
+}
+
+function itemsales(url) {
+    document.getElementById("popupHolder").style.display = "block";
+    document.getElementById("itemsalesHolder").style.display = "block";
+    let goToBtn = document.getElementById("goToBtn");
+    let itemsalesFrame = document.getElementById("itemsalesFrame");
+    goToBtn.innerHTML = "Go to " + url;
+    goToBtn.onclick = function () {
+        window.open(url)
+    };
+    itemsalesFrame.src = url
+}
+
+function showDownloadPopup(creator) {
+    this.finalDownloadA = document.getElementById("finalDownloadA");
+    document.getElementById("previewImg").outerHTML = `<div id="previewImg" style="background-color: rgba(0, 0, 0, 0.5); box-shadow: inset 0px 0px 0px 5px #fff; border-radius: 10px;"><div id="down-load"> <div style="width: 100%; text-align: center;"> <div class="loadingRing"> <div></div><div></div><div></div><div></div></div><div style="font-size:22px; color:rgba(255,255,255,0.6); margin-right:10px">LOADING</div></div></div></div>`
+    document.getElementById("popupHolder").style.display = "block";
+    document.getElementById("downloadHolder").style.display = "block";
+    let downloadFrame = document.getElementById("downloadFrame");
+    downloadFrame.style.display = "none";
+    downloadFrame.src = "/canvas?creator=" + creator;
+    setTimeout(() => {
+        window.dWindow = (downloadFrame.contentWindow || downloadFrame.contentDocument);
+        window.dDocument = dWindow.document;
+        var num = 0;
+        this.interval = setInterval(() => {
+            let e = true
+            try {
+                window.dWindow = (downloadFrame.contentWindow || downloadFrame.contentDocument);
+                window.dDocument = dWindow.document;
+                this.urls = {
+                    "svg": dWindow.img.src,
+                    "png": dWindow.canvas.toDataURL("image/png"),
+                    "svgX": (dDocument.getElementById("card").outerHTML).replace("card", "previewImg").replace('id="skins"', 'id="skinsSvg"'),
+                    "pngX": dWindow.img.outerHTML
+                };
+            } catch (err) {
+                e = false
+            }
+            if (e == true) {
+                document.getElementById("previewImg").outerHTML = urls.svgX;
+                finalDownloadA.href = urls.svg
+                finalDownloadA.download = `Skins_made_by_${oldAuthor}`
+                clearInterval(interval);
+            }
+            num++;
+            try {
+                if (num >= 50) {
+                    document.getElementById("previewImg").outerHTML = urls.svgX;
+                    finalDownloadA.href = urls.svg
+                    finalDownloadA.download = `Skins_made_by_${oldAuthor}`
+                    clearInterval(interval);
+                }
+            } catch (err) {
+                alert(`AN ERROR HAS OCCURED!
+Try checking your internet.
+
+${err}`)
+                hidePopup()
+                loadMessage.style.display = "none"
+                clearInterval(interval);
+            }
+        }, 100);
+        formatSelect.addEventListener('change', function () {
+            if (formatSelect.value == "svg") {
+                document.getElementById("previewImg").outerHTML = urls.svgX;
+                finalDownloadA.href = urls.svg
+                finalDownloadA.download = `Skins_made_by_${oldAuthor}`
+            } else if (formatSelect.value == "png") {
+                document.getElementById("previewImg").outerHTML = urls.pngX;
+                finalDownloadA.href = urls.png
+                finalDownloadA.download = `Skins_made_by_${oldAuthor}`
+            }
+        })
+    }, 1);
 }

@@ -5,63 +5,79 @@
     <title>hitthemoney</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @font-face {
-            font-family: 'gamefont';
-            src: url('./css/font2.ttf');
-        }
-
-        html,
-        body {
-            font-family: 'gamefont';
-            background-color: #000;
-            text-align: center;
-            margin-top: 25px;
-
-        }
-
-        .text {
-            color: #fff
-        }
-
-        a {
-            margin-top: 10px;
-            color: #0000ff;
-        }
-
-        input,
-        button {
-            margin-top: 10px;
-            font-family: 'gamefont';
-            background-color: #fff;
-        }
-
-        input {
-            width: 150px;
-            height: 20px;
-        }
-
-        button:active {
-            background-color: #0000ff;
-            color: #fff;
-        }
-
-        #display {
-            color: #fff;
-        }
-    </style>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Krunker Skin Maker Skins">
+    <meta name="og:title" content="Krunker Skin Maker Skins">
+    <meta name="og:url" content="https://hitthemoney.github.io/skin-maker-skins">
+    <meta name="og:site_name" content="Krunker Skin Maker Skins">
+    <meta name="og:type" content="website">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
-    <h1 class="text">Skins by Krunker Skin Makers Finder</h1>
-    <a href="https://hitthemoney.github.io">hitthemoney</a><span class="text"> |</span>
-    <a href="https://hitthemoney.github.io/skin-maker-skins/changelog.txt" id="version"></a>
+    <div id="top">
+        <div id="title">
+            <span id="mainTitle" class="text">Skins by Krunker Skin Makers Finder</span>
+            <div id="info">
+                <a href="https://hitthemoney.github.io">hitthemoney</a><span class="text"> |</span>
+                <a style="cursor: pointer;" onclick="showChangelog()" id="version"></a>
+            </div>
+        </div>
+        <div id="searchHolder">
+            <div id="search">
+                <input id="skinmakerName" type="text" placeholder="Skin Maker Name">
+                <button onclick="findSkins(this.showImg, false);" class="button" id="find">Find</button>
+            </div>
+            <div id="skinUI">
+                <span id="skinUIText">Old Skin UI </span>
+                <label class="switch" style="margin-left:10px">
+                    <input id="check" type="checkbox" onclick="findSkins(this.showImg, true);">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
     <br>
-    <input id="skinmakerName" type="text" placeholder="Skin Maker Name">
-    <button onclick="findSkins()" id="find">Find</button><br><br>
-    <div id="display">
+    <div id="loadMessage" style="display: none;">
+        <div style="width: 100%; text-align: center;">
+            <div class="loadingRing">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div style="font-size:22px; color:rgba(255,255,255,0.6); margin-right:10px">LOADING</div>
+        </div>
+    </div>
+    <div id="display" style="text-align: center;">
         <h3 class="text" id="author"></h3>
-        <div id="skins"></div>
+        <div style="width: 100%; text-align: center; position: absolute; top: 210px; bottom: 0px">
+            <div id="skins"></div>
+        </div>
+    </div>
+    <div id="bottom"><button id="downloadBtn" class="button" style="display: none;">Download Canvas</button></div>
+    <div style="display:none;" id="popupHolder">
+        <div onclick="hidePopup()" id="popupBack"></div>
+        <div id="changelogHolder" style="display: none;">
+            <span id="changelog"></span>
+        </div>
+        <div id="itemsalesHolder" style="display: none; overflow: hidden;">
+            <iframe id="itemsalesFrame" style="width: 100%; height: 90%;" src="" frameborder="0"></iframe>
+            <div id="goToBtn"></div>
+        </div>
+        <div id="downloadHolder" style="display: none;">
+            <iframe id="downloadFrame" src="" frameborder="0"></iframe>
+            <h1 id="preview">Preview:</h1>
+            <div id="previewImg"></div>
+            <div id="downloadInfo">
+                <a id="finalDownloadA" href="" download="">Download</a>
+                <label id="formatLabel" for="formatSelect">Format:</label>
+                <select id="formatSelect">
+                    <option value="svg">.SVG</option>
+                    <option value="png">.PNG</option>
+                </select>
+            </div>
+        </div>
     </div>
     <script src="js/data.js"></script>
     <script src="js/index.js"></script>
