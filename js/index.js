@@ -328,7 +328,7 @@ function showDownloadPopup(creator) {
     document.getElementById("downloadHolder").style.display = "block";
     let downloadFrame = document.getElementById("downloadFrame");
     downloadFrame.style.display = "none";
-    downloadFrame.src = "skin-maker-skins/canvas?creator=" + creator;
+    downloadFrame.src = "https://hitthemoney.github.io/skin-maker-skins/canvas/?creator=" + creator;
     setTimeout(() => {
         window.dWindow = (downloadFrame.contentWindow || downloadFrame.contentDocument);
         window.dDocument = dWindow.document;
