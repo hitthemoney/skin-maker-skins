@@ -380,7 +380,7 @@ ${err}`)
                 document.getElementById("previewImg").outerHTML = urls.pngX;
                 finalDownloadA.href = urls.png
                 finalDownloadA.download = `Skins_made_by_${oldAuthor}`
-            }
+            };
         })
     }, 1);
-}
+};
