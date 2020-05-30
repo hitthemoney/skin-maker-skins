@@ -6897,6 +6897,7 @@ const skins = [{
     "rAnimA": "x"
 }, {
     "name": "Osiris' Servant",
+    "creator": "FlowerKid",
     "midT": "weapons/weapon_3_1",
     "glow": true,
     "minGlo": 0.35,

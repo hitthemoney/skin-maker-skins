@@ -131,10 +131,8 @@ function getSkinsByCreator(creator) {
 function getUrlBySkinName(name) {
     var itemNum = 0;
     var arrayLength = skins.length;
-    var skinInfoArray = []
     var url;
     var lowcName = name.toLowerCase();
-    var itemType;
     while (itemNum < arrayLength) {
         skinName = skins[itemNum].name;
 
@@ -328,8 +326,9 @@ function showDownloadPopup(creator) {
     document.getElementById("downloadHolder").style.display = "block";
     let downloadFrame = document.getElementById("downloadFrame");
     downloadFrame.style.display = "none";
-    downloadFrame.src = "https://hitthemoney.github.io/skin-maker-skins/canvas/?creator=" + creator;
+    downloadFrame.src = "https://hitthemoney.github.io/skin-maker-skinscanvas/?creator=" + creator;
     setTimeout(() => {
+        formatSelect.value = "svg";;;
         window.dWindow = (downloadFrame.contentWindow || downloadFrame.contentDocument);
         window.dDocument = dWindow.document;
         var num = 0;

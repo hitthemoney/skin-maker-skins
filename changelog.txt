@@ -1,4 +1,7 @@
-v1.3.0
+v1.3.1
+
+Update v1.3.1
+- Fixed fonts not loading on PNG download (I still need to fix the images)
 
 Update v1.3.0
 - Major UI Update
