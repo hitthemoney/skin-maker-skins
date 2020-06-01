@@ -37,6 +37,7 @@ function stringToBool(string) {
 };
 
 function startUp() {
+    this.skinCreators = getCreators(true);
     this.formatSelect = document.getElementById("formatSelect");
     this.popups = ["changelog", "itemsales", "download"];
     getVersion();
@@ -44,6 +45,7 @@ function startUp() {
     this.creator = url.searchParams.get("creator");
     this.showImg = stringToBool(url.searchParams.get("showImg"));
     this.input = document.getElementById("skinmakerName");
+    updateCreators(true)
 
     if (creator !== null) {
         input.value = creator;
@@ -209,16 +211,27 @@ function getUrlBySkinName(name) {
     return url;
 };
 
-function findSkins(showImg, slider) {
+function findSkins(showImg, slider, author) {
+    if (author !== undefined) {
+        input.value = author
+    };
+    var authorElement = document.getElementById("author");
     var element = document.getElementById("skins");
     var check = document.getElementById("check");
     var loadMessage = document.getElementById("loadMessage");
-    if (slider == false || element.innerHTML !== "") {
+    if (slider !== true) {
+        this.oldAuthor = input.value;
+        this.krunkerSkins = getSkinsByCreator(input.value);
+    } else {
+        if (this.oldAuthor !== undefined) {
+            input.value = this.oldAuthor;
+        }
+    };
+    if (slider == false || authorElement.innerHTML !== "Creators:") {
         let downloadBtn = document.getElementById("downloadBtn");
         downloadBtn.style.display = "block";
-        loadMessage.style.display = "block";
-        var authorElement = document.getElementById("author");
         var skinsElement = document.getElementById("skins");
+        loadMessage.style.display = "block";
         if (authorElement.hasChildNodes()) {
             authorElement.removeChild(authorElement.childNodes[0]);
         };
@@ -226,42 +239,16 @@ function findSkins(showImg, slider) {
             skinsElement.removeChild(skinsElement.firstChild);
         };
         setTimeout(() => {
-            if (slider !== true) {
-                this.krunkerSkins = getSkinsByCreator(input.value);
-            } else {
-                input.value = this.oldAuthor;
-            };
             downloadBtn.onclick = function () {
                 showDownloadPopup(input.value)
             }
-            this.oldAuthor = input.value;
             var arrayLength = krunkerSkins.length;
             if (krunkerSkins[0] == undefined) {
                 document.getElementById("author").innerHTML = `They are no skins made by "${input.value}".`;
             } else {
+                this.oldAuthor = input.value;
                 if (check.checked == true) {
-                    for (num = 0; num < arrayLength; num++) {
-                        var img = document.createElement("img");
-                        var p = document.createElement("p");
-                        var text = document.createTextNode(krunkerSkins[num]);
-                        p.appendChild(text);
-                        var pId = `p${num}`
-                        var imgId = `img${num}`
-                        p.id = pId
-                        p.addEventListener('click', function () {
-                            showImage(this.id);
-                        });
-                        img.id = imgId;
-                        if (showImg !== true) {
-                            img.style.display = "none"
-                        }
-                        img.src = getUrlBySkinName(krunkerSkins[num]);
-                        element.appendChild(p);
-                        element.appendChild(img);
-                    }
-                    loadMessage.style.display = "none"
-                    document.getElementById("author").innerHTML = `Skins made by ${input.value}:`;
-                    document.getElementById("author").style = "display: block;font-size: 1.17em;margin-top: 1px;margin-bottom: 15px;"
+                    updateSkinsOld(krunkerSkins, showImg, true, "showImage(this.id);")
                 } else if (check.checked == false) {
                     for (num = 0; num < arrayLength; num++) {
                         let itemNum = getItemNum(krunkerSkins[num])
@@ -328,7 +315,7 @@ function showDownloadPopup(creator) {
     downloadFrame.style.display = "none";
     downloadFrame.src = "https://hitthemoney.github.io/skin-maker-skins/canvas/?creator=" + creator;
     setTimeout(() => {
-        formatSelect.value = "svg";;;
+        formatSelect.value = "svg";
         window.dWindow = (downloadFrame.contentWindow || downloadFrame.contentDocument);
         window.dDocument = dWindow.document;
         var num = 0;
@@ -383,3 +370,69 @@ ${err}`)
         })
     }, 1);
 };
+
+function getCreators(startUpBool) {
+    let input = document.getElementById("skinmakerName");
+    var creatorArray = [],
+        lowCCreatorArray = [],
+        arrayLength = skins.length,
+        inputLength = input.value.split(" ").join("").length,
+        inputVal = input.value.split(" ").join("");
+    for (num = 0; num < arrayLength; num++) {
+        let currentCreator = skins[num].creator;
+        if (currentCreator == undefined) {
+            currentCreator = "Krunker.io";
+        }
+        let xBool = ((currentCreator.toLowerCase()).split(" ").join("").slice(0, inputLength) == inputVal.toLowerCase());
+        if (startUpBool == true) {
+            xBool = true
+        }
+        if (lowCCreatorArray.indexOf(currentCreator.toLowerCase()) == -1 && xBool && currentCreator.toLowerCase() !== "jhonxay_playz" && currentCreator.toLowerCase() !== "zinoob" && currentCreator.toLowerCase() !== "blitz-." && currentCreator.toLowerCase() !== "electrode_" && currentCreator.toLowerCase() !== "kltter") {
+            lowCCreatorArray.push(currentCreator.toLowerCase());
+            creatorArray.push(currentCreator);
+        };
+    };
+    return creatorArray;
+};
+
+function updateSkinsOld(itemArray, showImg, imgBool, onclick) {
+    var element = document.getElementById("skins");
+    let arrayLength = itemArray.length;
+    for (num = 0; num < arrayLength; num++) {
+        var p = document.createElement("p");
+        var text = document.createTextNode(itemArray[num]);
+        p.appendChild(text);
+        var pId = `p${num}`
+        p.id = pId
+        p.className = "px"
+        p.addEventListener('click', function () {
+            eval(onclick)
+        });
+        element.appendChild(p);
+        if (imgBool == true) {
+            var img = document.createElement("img");
+            var imgId = `img${num}`
+            img.id = imgId;
+            if (showImg !== true) {
+                img.style.display = "none"
+            }
+            img.src = getUrlBySkinName(itemArray[num]);
+            element.appendChild(img);
+        }
+    }
+    loadMessage.style.display = "none"
+    document.getElementById("author").innerHTML = `Skins made by ${input.value}:`;
+    document.getElementById("author").style = "display: block;font-size: 2em;margin-top: 1px; margin-bottom: 15px;"
+}
+
+function updateCreators(b) {
+    if (b == undefined) b = false;
+    skinCreators = getCreators(b);
+    let skinsElement = document.getElementById("skins")
+    while (skinsElement.hasChildNodes()) {
+        skinsElement.removeChild(skinsElement.firstChild);
+    };
+    updateSkinsOld(skinCreators, false, false, `findSkins(${this.showImg}, false, itemArray[(this.id).substr(1)])`)
+    document.getElementById("author").innerHTML = `Creators:`;
+    document.getElementById("downloadBtn").style.display = "none"
+}

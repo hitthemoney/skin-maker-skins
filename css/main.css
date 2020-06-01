@@ -380,8 +380,8 @@ input:checked+.slider:before {
 #bottom {
     position: absolute;
     bottom: 0px;
-    width: 100%;
-    height: 115px;
+    /*width: 100%;
+    height: 115px;*/
 }
 
 #downloadBtn:hover {
@@ -460,4 +460,8 @@ input:checked+.slider:before {
 #finalDownloadA:hover {
     background-color: #10ff10;
     transform: scale(1.05)
+}
+
+.px {
+    cursor: pointer !important;
 }
