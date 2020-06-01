@@ -308,12 +308,12 @@ function itemsales(url) {
 
 function showDownloadPopup(creator) {
     this.finalDownloadA = document.getElementById("finalDownloadA");
-    document.getElementById("previewImg").outerHTML = `<div id="previewImg" style="background-color: rgba(0, 0, 0, 0.5); box-shadow: inset 0px 0px 0px 5px #fff; border-radius: 10px;"><div id="down-load"> <div style="width: 100%; text-align: center;"> <div class="loadingRing"> <div></div><div></div><div></div><div></div></div><div style="font-size:22px; color:rgba(255,255,255,0.6); margin-right:10px">LOADING</div></div></div></div>`
+    document.getElementById("previewImg").outerHTML = `<div id="previewImg" style="background-color: rgba(0, 0, 0, 0.5); top: 0%; box-shadow: inset 0px 0px 0px 5px #fff; border-radius: 10px;"><div id="down-load"> <div style="width: 100%; text-align: center;"> <div class="loadingRing"> <div></div><div></div><div></div><div></div></div><div style="font-size:22px; color:rgba(255,255,255,0.6); margin-right:10px">LOADING</div></div></div></div>`
     document.getElementById("popupHolder").style.display = "block";
     document.getElementById("downloadHolder").style.display = "block";
     let downloadFrame = document.getElementById("downloadFrame");
     downloadFrame.style.display = "none";
-    downloadFrame.src = "https://hitthemoney.github.io/skin-maker-skins/canvas/?creator=" + creator;
+    downloadFrame.src = /*"https://hitthemoney.github.io/skin-maker-skins/*/"canvas/?creator=" + creator;
     setTimeout(() => {
         formatSelect.value = "svg";
         window.dWindow = (downloadFrame.contentWindow || downloadFrame.contentDocument);
@@ -418,6 +418,9 @@ function updateSkinsOld(itemArray, showImg, imgBool, onclick) {
             }
             img.src = getUrlBySkinName(itemArray[num]);
             element.appendChild(img);
+            p.style.fontSize = "1em"
+        } else {
+            p.style.fontSize = "1.75em"
         }
     }
     loadMessage.style.display = "none"
@@ -434,5 +437,6 @@ function updateCreators(b) {
     };
     updateSkinsOld(skinCreators, false, false, `findSkins(${this.showImg}, false, itemArray[(this.id).substr(1)])`)
     document.getElementById("author").innerHTML = `Creators:`;
+    document.getElementById("author").style.fontSize = "2.75em";
     document.getElementById("downloadBtn").style.display = "none"
 }
