@@ -106,8 +106,8 @@ function svgToImg(svg2) {
         ctx.drawImage(img, 0, 0);
         pngLink = canvas.toDataURL("image/png");
         let imgSrcElem = d.getElementsByClassName("imgSrc")
-        for (num = 0; num < imgSrcElem.length; num++) imgSrcElem[num]["content"] = img.src
-        d.getElementById("input").value = img.src;
+        for (num = 0; num < imgSrcElem.length; num++) imgSrcElem[num]["content"] = pngLink
+        d.getElementById("input").value = pngLink;
         d.getElementById("downloadSvg").download = `Skins_by_${creator}.SVG`;
         d.getElementById("downloadSvg").href = img.src;
 
