@@ -393,7 +393,7 @@ function getCreators(startUpBool) {
             lowCCreatorArray.push(currentCreator.toLowerCase());
             creatorArray.push(currentCreator);
         };
-        if (creatorArray.indexOf("kitter") == -1 && startUpBool !== true) {
+        if (inputLength > 1 && creatorArray.indexOf("kitter") == -1 && startUpBool !== true) {
             if (currentCreator == "Kltter" && lowCCreatorArray.indexOf(currentCreator.toLowerCase()) == -1 && (inputVal.toLowerCase().slice(0, inputLength) == ("Kltter".toLowerCase()).split(" ").join("").slice(0, inputLength))) {
                 lowCCreatorArray.push("Kltter".toLowerCase());
                 creatorArray.push("Kltter");
