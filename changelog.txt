@@ -1,4 +1,12 @@
-v1.3.1
+v1.3.3
+
+Update v1.3.3
+- Fixed gun images not loading on PNG download
+- Fixed when you save a canvas by krunker.io it would save as ".io" format
+
+Update v1.3.2
+- Now it shows all creators on start and when searching
+- Added autofill to search
 
 Update v1.3.1
 - Fixed fonts not loading on PNG download (I still need to fix the images)

@@ -472,3 +472,14 @@ input:checked+.slider:before {
     transform: translate(-50%, -60%) !important;
     border-radius: 10px;
 }
+
+#downloadHolderBox {
+    border-radius: 15px;
+    height: 450px;
+    width: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%) !important;
+    border-radius: 10px;
+}

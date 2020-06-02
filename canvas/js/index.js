@@ -2,7 +2,7 @@ window.getBase64Image = function (img) {
     this.img2 = img
     document.body.append(img)
     img.onload = function () {
-        var canvas = document.createElement("canvas");
+        this.canvas = document.createElement("canvas");
         canvas.width = 256;
         canvas.height = 256;
         var ctx = canvas.getContext("2d");
@@ -77,7 +77,16 @@ function setSvg() {
                 img.src = getUrlBySkinName(krunkerSkins[num])
                 img.width = width
                 img.height = width
-                let imgUrl = getUrlBySkinName(krunkerSkins[num]); //getBase64Image(img)
+                let imgUrl = ""
+                let bool = false;
+                for (num2 = 0; bool == false; num2++) {
+                    if ((base64URLS[num2].name).toLowerCase() == krunkerSkins[num].toLowerCase()) {
+                        imgUrl = base64URLS[num2].url
+                        bool = true
+                    } if (num2 >= skins.length - 1) {
+                        bool = true
+                    }
+                }
                 let color = rarities[skins[getItemNum(krunkerSkins[num])].rarity].color;
                 let skinCard = d.createElement("div")
                 skinsDiv.append(skinCard)
@@ -114,6 +123,8 @@ function svgToImg(svg2) {
         d.getElementById("input2").value = pngLink;
         d.getElementById("downloadPng").download = `Skins_by_${creator}.PNG`;
         d.getElementById("downloadPng").href = pngLink;
+
+        document.querySelector('meta[name="og:image"]').setAttribute("content", pngLink);
 
         //d.body.append(img)
 

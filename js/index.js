@@ -315,6 +315,7 @@ function showDownloadPopup(creator) {
     downloadFrame.style.display = "none";
     downloadFrame.src = "https://hitthemoney.github.io/skin-maker-skins/canvas/?creator=" + creator;
     setTimeout(() => {
+        var oldAuthor2 = oldAuthor.replace(".", "")
         formatSelect.value = "svg";
         window.dWindow = (downloadFrame.contentWindow || downloadFrame.contentDocument);
         window.dDocument = dWindow.document;
@@ -326,17 +327,17 @@ function showDownloadPopup(creator) {
                 window.dDocument = dWindow.document;
                 this.urls = {
                     "svg": dWindow.img.src,
-                    "png": dWindow.canvas.toDataURL("image/png"),
+                    "png": dDocument.getElementById("downloadPng").href,
                     "svgX": (dDocument.getElementById("card").outerHTML).replace("card", "previewImg").replace('id="skins"', 'id="skinsSvg"'),
                     "pngX": dWindow.img.outerHTML
                 };
             } catch (err) {
                 e = false
             }
-            if (e == true) {
+            if (e == true && urls.png !== "") {
                 document.getElementById("previewImg").outerHTML = urls.svgX;
                 finalDownloadA.href = urls.svg
-                finalDownloadA.download = `Skins_made_by_${oldAuthor}`
+                finalDownloadA.download = `Skins_made_by_${oldAuthor2}`
                 clearInterval(interval);
             }
             num++;
@@ -344,7 +345,7 @@ function showDownloadPopup(creator) {
                 if (num >= 50) {
                     document.getElementById("previewImg").outerHTML = urls.svgX;
                     finalDownloadA.href = urls.svg
-                    finalDownloadA.download = `Skins_made_by_${oldAuthor}`
+                    finalDownloadA.download = `Skins_made_by_${oldAuthor2}`
                     clearInterval(interval);
                 }
             } catch (err) {
@@ -358,14 +359,15 @@ ${err}`)
             }
         }, 100);
         formatSelect.addEventListener('change', function () {
+            var oldAuthor2 = oldAuthor.replace(".", "")
             if (formatSelect.value == "svg") {
                 document.getElementById("previewImg").outerHTML = urls.svgX;
                 finalDownloadA.href = urls.svg
-                finalDownloadA.download = `Skins_made_by_${oldAuthor}`
+                finalDownloadA.download = `Skins_made_by_${oldAuthor2}`
             } else if (formatSelect.value == "png") {
                 document.getElementById("previewImg").outerHTML = urls.pngX;
                 finalDownloadA.href = urls.png
-                finalDownloadA.download = `Skins_made_by_${oldAuthor}`
+                finalDownloadA.download = `Skins_made_by_${oldAuthor2}`
             };
         })
     }, 1);
@@ -387,10 +389,16 @@ function getCreators(startUpBool) {
         if (startUpBool == true) {
             xBool = true
         }
-        if (lowCCreatorArray.indexOf(currentCreator.toLowerCase()) == -1 && xBool && currentCreator.toLowerCase() !== "jhonxay_playz" && currentCreator.toLowerCase() !== "zinoob" && currentCreator.toLowerCase() !== "blitz-." && currentCreator.toLowerCase() !== "electrode_" && currentCreator.toLowerCase() !== "kltter") {
+        if (lowCCreatorArray.indexOf(currentCreator.toLowerCase()) == -1 && xBool && currentCreator.toLowerCase() !== "jhonxay" && currentCreator.toLowerCase() !== "zino" && currentCreator.toLowerCase() !== "blitz" && currentCreator.toLowerCase() !== "electrode_]" && currentCreator.toLowerCase() !== "kltter") {
             lowCCreatorArray.push(currentCreator.toLowerCase());
             creatorArray.push(currentCreator);
         };
+        if (creatorArray.indexOf("kitter") == -1 && startUpBool !== true) {
+            if (currentCreator == "Kltter" && lowCCreatorArray.indexOf(currentCreator.toLowerCase()) == -1 && (inputVal.toLowerCase().slice(0, inputLength) == ("Kltter".toLowerCase()).split(" ").join("").slice(0, inputLength))) {
+                lowCCreatorArray.push("Kltter".toLowerCase());
+                creatorArray.push("Kltter");
+            };
+        }
     };
     return creatorArray;
 };

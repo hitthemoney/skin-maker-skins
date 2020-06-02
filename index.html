@@ -4,6 +4,8 @@
 <head>
     <title>hitthemoney</title>
     <meta charset="UTF-8">
+    <meta name="description" content="Krunker Skin Maker Skins finds all skins from a skin maker!">
+    <meta name="keywords" content="Krunker, skinmakers, krunker skin maker skins, skin maker skins, skins">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Krunker Skin Maker Skins">
@@ -25,7 +27,8 @@
         </div>
         <div id="searchHolder">
             <div id="search">
-            <input id="skinmakerName" onkeydown="setTimeout(function() {updateCreators()}, 1)" type="text" placeholder="Skin Maker Name">
+                <input id="skinmakerName" onkeydown="setTimeout(function() {updateCreators()}, 1)" type="text"
+                    placeholder="Skin Maker Name">
                 <button onclick="findSkins(this.showImg, false);" class="button" id="find">Find</button>
             </div>
             <div id="skinUI">
@@ -66,10 +69,11 @@
             <div id="goToBtn"></div>
         </div>
         <div id="downloadHolder" style="display: none;">
+            <div id="downloadHolderBox" onclick="hidePopup()"></div>
             <iframe id="downloadFrame" src="" frameborder="0"></iframe>
             <h1 id="preview">Preview:</h1>
             <div id="previewImg"></div>
-            <div id="downloadInfo">
+            <div id="downloadInfo" >
                 <a id="finalDownloadA" href="" download="">Download</a>
                 <label id="formatLabel" for="formatSelect">Format:</label>
                 <select id="formatSelect">
@@ -87,4 +91,3 @@
 </body>
 
 </html>
-
