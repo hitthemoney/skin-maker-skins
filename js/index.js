@@ -39,7 +39,7 @@ function stringToBool(string) {
 function startUp() {
     this.skinCreators = getCreators(true);
     this.formatSelect = document.getElementById("formatSelect");
-    this.popups = ["changelog", "itemsales", "download"];
+    this.popups = ["changelog", "itemsales", "download", "maintenance"];
     getVersion();
     this.url = new URL(document.URL);
     this.creator = url.searchParams.get("creator");
@@ -53,13 +53,16 @@ function startUp() {
     };
 };
 
-function getSkinsByCreator(creator) {
+function getSkinsByCreator(creator, numB) {
     var itemNum = 0,
         arrayLength = skins.length,
         skinsByCreatorArray = [],
+        skinsByCreatorArray2 = [],
         creator1 = creator,
         creator2 = creator;
     var skinCreator,
+        skinCreator1,
+        skinCreator2,
         lowcCreator = creator.toLowerCase();
     if (lowcCreator == "krunker") {
         creator1 = "krunker.io"
@@ -114,101 +117,53 @@ function getSkinsByCreator(creator) {
     }
 
     while (itemNum < arrayLength) {
-        skinCreator = skins[itemNum].creator;
+        skinCreator = skins[itemNum].creator
         if (skinCreator == undefined) {
             skinCreator = "Krunker.io";
         };
-        if (skinCreator.toLowerCase() == lowcCreator) {
-            skinsByCreatorArray.push(skins[itemNum].name);
-        } else if (skinCreator.toLowerCase() == creator1.toLowerCase()) {
-            skinsByCreatorArray.push(skins[itemNum].name);
-        } else if (skinCreator.toLowerCase() == creator2.toLowerCase()) {
-            skinsByCreatorArray.push(skins[itemNum].name);
+        skinCreator1 = (skinCreator).split(" & ")[0];
+        skinCreator2 = (skinCreator).split(" & ")[1];
+        if (skinCreator2 == undefined) {
+            skinCreator2 = "";
         };
-        itemNum++;
-    };
-    return skinsByCreatorArray
-};
-
-function getUrlBySkinName(name) {
-    var itemNum = 0;
-    var arrayLength = skins.length;
-    var url;
-    var lowcName = name.toLowerCase();
-    while (itemNum < arrayLength) {
-        skinName = skins[itemNum].name;
-
-        if (skinName.toLowerCase() == lowcName) {
-            if (skins[itemNum].keyW == "Knife" || skins[itemNum].keyW == "Axe" || skins[itemNum].keyW == "Toilet") {
-                if (skins[itemNum].tex == undefined) {
-                    id = skins[itemNum].id;
-                    url = `https://assets.krunker.io/textures/previews/melee/melee_${id}.png`;
-                } else {
-                    id = skins[itemNum].id;
-                    tex = skins[itemNum].tex;
-                    url = `https://assets.krunker.io/textures/previews/melee/melee_${id}_${tex}.png`;
-                }
-            } else if (skins[itemNum].keyW == "Head") {
-                if (skins[itemNum].tex == undefined) {
-                    id = skins[itemNum].id;
-                    url = `https://assets.krunker.io/textures/previews/cosmetics/1_${id}.png`;
-                } else {
-                    id = skins[itemNum].id;
-                    tex = skins[itemNum].tex;
-                    url = `https://assets.krunker.io/textures/previews/cosmetics/1_${id}_${tex}.png`;
-                }
-            } else if (skins[itemNum].keyW == "Back") {
-                if (skins[itemNum].tex == undefined) {
-                    id = skins[itemNum].id;
-                    url = `https://assets.krunker.io/textures/previews/cosmetics/2_${id}.png`;
-                } else {
-                    id = skins[itemNum].id;
-                    tex = skins[itemNum].tex;
-                    url = `https://assets.krunker.io/textures/previews/cosmetics/2_${id}_${tex}.png`;
-                }
-            } else if (skins[itemNum].keyW == "Sprays") {
-                id = skins[itemNum].id;
-                url = `https://assets.krunker.io/textures/sprays/${id}.png`;
-            } else if (skins[itemNum].shirtCol !== undefined) {
-                id = skins[itemNum].id;
-                url = `https://assets.krunker.io/textures/previews/cosmetics/5_${id}.png`;
-            } else if (skins[itemNum].midT !== undefined && skins[itemNum].weapon == 6) {
-                midT = skins[itemNum].midT;
-                mid = skins[itemNum].mid;
-                if (midT[18] !== undefined) {
-                    id = midT[17] + midT[18]
-                } else if (midT[18] == undefined) {
-                    id = midT[17]
-                };
-                url = `https://assets.krunker.io/textures/previews/weapons/weapon_6_m${mid}_${id}.png`;
-            } else if (skins[itemNum].keyW == undefined && skins[itemNum].pat == undefined && skins[itemNum].weapon !== undefined && skins[itemNum].id !== undefined) {
-                id = skins[itemNum].id;
-                weapon = skins[itemNum].weapon;
-                url = `https://assets.krunker.io/textures/previews/weapons/weapon_${weapon}_${id}.png`;
-            } else if (skins[itemNum].keyW == undefined && skins[itemNum].tex !== undefined && skins[itemNum].movT !== undefined) {
-                pat = skins[itemNum].pat;
-                weapon = skins[itemNum].weapon;
-                url = `https://assets.krunker.io/textures/previews/weapons/weapon_${weapon}_c${pat}.png`;
-            } else if (skins[itemNum].keyW == undefined && skins[itemNum].pat == undefined && skins[itemNum].mid !== undefined) {
-                midT = skins[itemNum].midT;
-                mid = skins[itemNum].mid;
-                weapon = skins[itemNum].weapon;
-                if (midT == undefined) {
-                    url = `https://assets.krunker.io/textures/previews/weapons/weapon_${weapon}_m${mid}.png`
-                } else {
-                    if (midT[18] !== undefined) {
-                        id = midT[17] + midT[18]
-                    } else if (midT[18] == undefined) {
-                        id = midT[17]
-                    };
-                    url = `https://assets.krunker.io/textures/previews/weapons/weapon_${weapon}_m${mid}_${id}.png`;
-                }
-            }
-
+        let toPush = itemNum
+        let toPush2 = skins[itemNum].name
+        if (skinCreator1.toLowerCase() == lowcCreator || skinCreator1.toLowerCase() == creator1.toLowerCase() || skinCreator1.toLowerCase() == creator2.toLowerCase()) {
+            skinsByCreatorArray.push(toPush);
+            skinsByCreatorArray2.push(toPush2);
+        } else if (skinCreator2.toLowerCase() == lowcCreator || skinCreator2.toLowerCase() == creator1.toLowerCase() || skinCreator2.toLowerCase() == creator2.toLowerCase()) {
+            skinsByCreatorArray.push(toPush);
+            skinsByCreatorArray2.push(toPush2);
         }
         itemNum++;
     };
-    return url;
+    if (!numB) {
+        return skinsByCreatorArray
+    } else {
+        return [skinsByCreatorArray, skinsByCreatorArray2]
+    }
+};
+
+function getUrlBySkinName(skinName, itemNum2) {
+    var itemNum,
+        t;
+    if (itemNum2 == undefined) {
+        let num = 0;
+        const arrayLength = skins.length;
+        let itemNum = 0;
+        while (num < arrayLength) {
+            if (skins[num].name.toLowerCase() === skinName.toLowerCase()) itemNum = num;
+            num++;
+        }
+        if (itemNum === 0 && skinName.toLowerCase() !== 'arctic hunt') throw new Error("Invalid Skin!");
+        t = skins[itemNum]
+        if (!t.midT == false || t.midT == 0) t.midT = t.midT.toString()
+    } else {
+        itemNum = itemNum2
+        t = skins[itemNum]
+        if (!t.midT == false || t.midT == 0) t.midT = t.midT.toString()
+    }
+    return "https://assets.krunker.io" + ("/textures/" + (t.type && 4 == t.type ? "sprays/" + t.id : "previews/" + (t.type && (3 > t.type || 5 == t.type) ? "cosmetics/" + t.type + "_" + t.id + (t.tex ? "_" + t.tex : "") : types[t.type || 0] + (t.type && 3 == t.type ? t.id + (null == t.pat ? null == t.tex ? "" : "_" + t.tex : "_c" + t.pat) : (t.weapon || 0) + "_" + (null == t.mid ? null == t.pat ? t.tex ? t.tex : t.id : "c" + t.pat : "m" + t.mid + (null == t.midT ? "" : "_" + t.midT.split("_").slice(-1)[0]))))) + ".png")
 };
 
 function findSkins(showImg, slider, author) {
@@ -221,7 +176,9 @@ function findSkins(showImg, slider, author) {
     var loadMessage = document.getElementById("loadMessage");
     if (slider !== true) {
         this.oldAuthor = input.value;
-        this.krunkerSkins = getSkinsByCreator(input.value);
+        this.skinData = getSkinsByCreator(input.value, true);
+        this.krunkerSkinsNames = skinData[1]
+        this.krunkerSkins = skinData[0];
     } else {
         if (this.oldAuthor !== undefined) {
             input.value = this.oldAuthor;
@@ -240,7 +197,8 @@ function findSkins(showImg, slider, author) {
         };
         setTimeout(() => {
             downloadBtn.onclick = function () {
-                showDownloadPopup(input.value)
+                //showDownloadPopup(input.value)
+                showMaintenancePopup()
             }
             var arrayLength = krunkerSkins.length;
             if (krunkerSkins[0] == undefined) {
@@ -248,14 +206,22 @@ function findSkins(showImg, slider, author) {
             } else {
                 this.oldAuthor = input.value;
                 if (check.checked == true) {
-                    updateSkinsOld(krunkerSkins, showImg, true, "showImage(this.id);")
+                    updateSkinsOld(krunkerSkinsNames, showImg, true, "showImage(this.id);")
                 } else if (check.checked == false) {
                     for (num = 0; num < arrayLength; num++) {
-                        let itemNum = getItemNum(krunkerSkins[num])
+                        let itemNum = krunkerSkins[num]
+                        let skinName = skins[krunkerSkins[num]].name
                         let color = rarities[skins[itemNum].rarity].color;
                         let skinCard = document.createElement("div")
                         element.append(skinCard)
-                        skinCard.outerHTML = `<div onclick="itemsales('https://krunker.io/social.html?p=itemsales&i=${itemNum}');" class="itemCard" id="i${num}" style="color:${color}; border:5px solid ${color};"><span class="itemText">${krunkerSkins[num]}</span><img draggable="false" class="marketImg" src="${getUrlBySkinName(krunkerSkins[num])}"></div>`
+                        let image = "";
+                        let extraInfo = "";
+                        let exStyle = "";
+                        if (skins[itemNum].rarity == 6) exStyle = "animation: rainbowCard .5s linear infinite"
+                        if (skins[itemNum].name == "RGB" || skins[itemNum].name == "Hackusate") extraInfo = 'style="animation: rgbHue .8s steps(36) infinite"'
+                        if (skins[itemNum].keyW !== "Spray" && skins[itemNum].keyW !== "Sprays") image = `<img draggable="false" class="marketImg" ${extraInfo} src="${getUrlBySkinName(skinName, itemNum)}">`
+                        else if (skins[itemNum].keyW == "Spray" || skins[itemNum].keyW == "Sprays") image = `<div draggable="false" class="marketImg marketImgSpray" style="background-image: url(${getUrlBySkinName(skinName, itemNum)}); animation: sprayAni${skins[itemNum].frames} ${skins[itemNum].frames}s infinite"></div>`
+                        skinCard.outerHTML = `<div onclick="itemsales('https://krunker.io/social.html?p=itemsales&i=${itemNum}');" class="itemCard" id="i${num}" style="color:${color}; border:5px solid ${color}; ${exStyle}"><span class="itemText">${skinName}</span>${image}</div>`
                     }
                     document.getElementById("author").innerHTML = `Skins made by ${input.value}:`;
                     document.getElementById("author").style = "display: block;font-size: 2em;margin-top: 1px; margin-bottom: 15px;"
@@ -389,7 +355,7 @@ function getCreators(startUpBool) {
         if (startUpBool == true) {
             xBool = true
         }
-        if (lowCCreatorArray.indexOf(currentCreator.toLowerCase()) == -1 && xBool && currentCreator.toLowerCase() !== "jhonxay" && currentCreator.toLowerCase() !== "zino" && currentCreator.toLowerCase() !== "blitz" && currentCreator.toLowerCase() !== "electrode_]" && currentCreator.toLowerCase() !== "kltter") {
+        if (lowCCreatorArray.indexOf(currentCreator.toLowerCase()) == -1 && xBool && currentCreator.toLowerCase() !== "jhonxay" && currentCreator.toLowerCase() !== "zino" && currentCreator.toLowerCase() !== "blitz" && currentCreator.toLowerCase() !== "electrode_]" && currentCreator.toLowerCase() !== "kltter" && currentCreator.toLowerCase() !== "nxbulah & kilfy") {
             lowCCreatorArray.push(currentCreator.toLowerCase());
             creatorArray.push(currentCreator);
         };
@@ -426,7 +392,7 @@ function updateSkinsOld(itemArray, showImg, imgBool, onclick) {
             }
             img.src = getUrlBySkinName(itemArray[num]);
             element.appendChild(img);
-            p.style.fontSize = "1em"
+            p.style.fontSize = "1.25em"
         } else {
             p.style.fontSize = "1.75em"
         }
@@ -447,4 +413,9 @@ function updateCreators(b) {
     document.getElementById("author").innerHTML = `Creators:`;
     document.getElementById("author").style.fontSize = "2.75em";
     document.getElementById("downloadBtn").style.display = "none"
+}
+
+showMaintenancePopup = () => {
+    document.getElementById("popupHolder").style.display = "block";
+    document.getElementById("maintenanceHolder").style.display = "block";
 }

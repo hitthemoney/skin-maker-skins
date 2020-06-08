@@ -1,4 +1,10 @@
-v1.3.3
+v1.3.4
+
+Update v1.3.4
+- Added season 3 skins
+- Added image animations (for RGB and Hackusate)
+- Added border and text animations (for unobtainables)
+- Fixed: if they were multiple skins with the same it would only show the image for the latest skin with that name released (EX: they are more than one raynb0w)
 
 Update v1.3.3
 - Fixed gun images not loading on PNG download

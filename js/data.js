@@ -1570,7 +1570,7 @@ const skins = [{
         sitOff: .75,
         sitOffZ: -.8,
         yOff: -5,
-        xRot: 3.141592653589793,
+        xRot: Math.PI,
         rarity: 3
     }, {
         name: "Sturm Helmet",
@@ -1786,7 +1786,6 @@ const skins = [{
         rarity: 4
     }, {
         name: "Vlaine",
-        creator: "Hoodgail",
         id: 36,
         weapon: 1,
         rarity: 1
@@ -1827,14 +1826,12 @@ const skins = [{
         rarity: 4
     }, {
         name: "Uzera",
-        creator: "Hoodgail",
         id: 2,
         glow: !0,
         weapon: 10,
         rarity: 4
     }, {
         name: "Tazor",
-        creator: "Hoodgail",
         glow: !0,
         id: 7,
         weapon: 10,
@@ -1877,7 +1874,6 @@ const skins = [{
         rarity: 3
     }, {
         name: "Leine",
-        creator: "Hoodgail",
         id: 43,
         weapon: 1,
         rarity: 3
@@ -2559,6 +2555,7 @@ const skins = [{
     }, {
         name: "Frostbite",
         keyW: "Axe",
+        priceMlt: 4,
         animInd: 1,
         glow: !0,
         id: 1,
@@ -2708,7 +2705,7 @@ const skins = [{
     }, {
         name: "Intervention XI",
         mid: 0,
-        midT: "weapons/weapon_1_1",
+        midT: 1,
         glow: !0,
         seas: 2,
         pulsT: .0015,
@@ -5233,7 +5230,7 @@ const skins = [{
         sitOff: -.5,
         sitOffZ: -.93,
         yOff: -1.3,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Red Backpack",
         id: 14,
@@ -5246,7 +5243,7 @@ const skins = [{
         sitOff: -.8,
         sitOffZ: -.8,
         yOff: -1.5,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Blue Backpack",
         id: 14,
@@ -5260,7 +5257,7 @@ const skins = [{
         sitOff: -.8,
         sitOffZ: -.8,
         yOff: -1.5,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Police Vest",
         id: 15,
@@ -5273,7 +5270,7 @@ const skins = [{
         sitOff: .4,
         sitOffZ: 0,
         yOff: -2,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Angelic Wings",
         id: 16,
@@ -5607,7 +5604,7 @@ const skins = [{
         yOff: -2,
         xOff: .5,
         scl: 4,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Unicorn Backpack",
         id: 21,
@@ -5621,7 +5618,7 @@ const skins = [{
         yOff: -2,
         xOff: -1.5,
         scl: 3.5,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Flame Talon",
         weapon: 5,
@@ -5860,7 +5857,7 @@ const skins = [{
         mid: 0,
         blocked: !0,
         noSale: !0,
-        midT: "weapons/weapon_6_38",
+        midT: 38,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5871,7 +5868,7 @@ const skins = [{
     }, {
         name: "Roadkill",
         mid: 0,
-        midT: "weapons/weapon_6_1",
+        midT: 1,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5882,7 +5879,7 @@ const skins = [{
     }, {
         name: "Molten Core",
         mid: 0,
-        midT: "weapons/weapon_6_2",
+        midT: 2,
         pulsT: .0015,
         scl: .9,
         mScl: 1,
@@ -5895,7 +5892,7 @@ const skins = [{
     }, {
         name: "Mosaik",
         mid: 0,
-        midT: "weapons/weapon_6_3",
+        midT: 3,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5906,7 +5903,7 @@ const skins = [{
     }, {
         name: "Kiason",
         mid: 0,
-        midT: "weapons/weapon_6_4",
+        midT: 4,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5917,7 +5914,7 @@ const skins = [{
     }, {
         name: "Monatomic",
         mid: 0,
-        midT: "weapons/weapon_6_5",
+        midT: 5,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5929,7 +5926,7 @@ const skins = [{
     }, {
         name: "Crystalline",
         mid: 0,
-        midT: "weapons/weapon_6_6",
+        midT: 6,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5941,7 +5938,7 @@ const skins = [{
     }, {
         name: "Blue Digital",
         mid: 0,
-        midT: "weapons/weapon_6_7",
+        midT: 7,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5952,7 +5949,7 @@ const skins = [{
     }, {
         name: "Green Digital",
         mid: 0,
-        midT: "weapons/weapon_6_8",
+        midT: 8,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5963,7 +5960,7 @@ const skins = [{
     }, {
         name: "Purple Digital",
         mid: 0,
-        midT: "weapons/weapon_6_9",
+        midT: 9,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5974,7 +5971,7 @@ const skins = [{
     }, {
         name: "Red Digital",
         mid: 0,
-        midT: "weapons/weapon_6_10",
+        midT: 10,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5985,7 +5982,7 @@ const skins = [{
     }, {
         name: "Pink Poly",
         mid: 0,
-        midT: "weapons/weapon_6_11",
+        midT: 11,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -5996,7 +5993,7 @@ const skins = [{
     }, {
         name: "Orange Poly",
         mid: 0,
-        midT: "weapons/weapon_6_12",
+        midT: 12,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6007,7 +6004,7 @@ const skins = [{
     }, {
         name: "Green Poly",
         mid: 0,
-        midT: "weapons/weapon_6_13",
+        midT: 13,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6018,7 +6015,7 @@ const skins = [{
     }, {
         name: "Blue Poly",
         mid: 0,
-        midT: "weapons/weapon_6_14",
+        midT: 14,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6029,7 +6026,7 @@ const skins = [{
     }, {
         name: "Pink Drip",
         mid: 0,
-        midT: "weapons/weapon_6_15",
+        midT: 15,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6040,7 +6037,7 @@ const skins = [{
     }, {
         name: "Blue Drip",
         mid: 0,
-        midT: "weapons/weapon_6_16",
+        midT: 16,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6051,7 +6048,7 @@ const skins = [{
     }, {
         name: "Sepia",
         mid: 0,
-        midT: "weapons/weapon_6_17",
+        midT: 17,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6062,7 +6059,7 @@ const skins = [{
     }, {
         name: "Olive",
         mid: 0,
-        midT: "weapons/weapon_6_18",
+        midT: 18,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6073,7 +6070,7 @@ const skins = [{
     }, {
         name: "Spruce",
         mid: 0,
-        midT: "weapons/weapon_6_19",
+        midT: 19,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6084,7 +6081,7 @@ const skins = [{
     }, {
         name: "Dijon",
         mid: 0,
-        midT: "weapons/weapon_6_20",
+        midT: 20,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6095,7 +6092,7 @@ const skins = [{
     }, {
         name: "Red Splat",
         mid: 0,
-        midT: "weapons/weapon_6_21",
+        midT: 21,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6106,7 +6103,7 @@ const skins = [{
     }, {
         name: "Purple Splat",
         mid: 0,
-        midT: "weapons/weapon_6_22",
+        midT: 22,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6117,7 +6114,7 @@ const skins = [{
     }, {
         name: "Orange Splat",
         mid: 0,
-        midT: "weapons/weapon_6_23",
+        midT: 23,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6128,7 +6125,7 @@ const skins = [{
     }, {
         name: "Green Splat",
         mid: 0,
-        midT: "weapons/weapon_6_24",
+        midT: 24,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6139,7 +6136,7 @@ const skins = [{
     }, {
         name: "Yellow Comb",
         mid: 0,
-        midT: "weapons/weapon_6_25",
+        midT: 25,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6150,7 +6147,7 @@ const skins = [{
     }, {
         name: "Red Comb",
         mid: 0,
-        midT: "weapons/weapon_6_26",
+        midT: 26,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6161,7 +6158,7 @@ const skins = [{
     }, {
         name: "Green Comb",
         mid: 0,
-        midT: "weapons/weapon_6_27",
+        midT: 27,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6172,7 +6169,7 @@ const skins = [{
     }, {
         name: "Blue Comb",
         mid: 0,
-        midT: "weapons/weapon_6_28",
+        midT: 28,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6183,7 +6180,7 @@ const skins = [{
     }, {
         name: "Sandstorm",
         mid: 0,
-        midT: "weapons/weapon_6_29",
+        midT: 29,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6194,7 +6191,7 @@ const skins = [{
     }, {
         name: "Picnic",
         mid: 0,
-        midT: "weapons/weapon_6_30",
+        midT: 30,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6205,7 +6202,7 @@ const skins = [{
     }, {
         name: "Picasso",
         mid: 0,
-        midT: "weapons/weapon_6_31",
+        midT: 31,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6216,7 +6213,7 @@ const skins = [{
     }, {
         name: "Snowy",
         mid: 0,
-        midT: "weapons/weapon_6_32",
+        midT: 32,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6227,7 +6224,7 @@ const skins = [{
     }, {
         name: "Hazard",
         mid: 0,
-        midT: "weapons/weapon_6_33",
+        midT: 33,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6238,7 +6235,7 @@ const skins = [{
     }, {
         name: "Cerise",
         mid: 0,
-        midT: "weapons/weapon_6_34",
+        midT: 34,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6249,7 +6246,7 @@ const skins = [{
     }, {
         name: "Orange Drip",
         mid: 0,
-        midT: "weapons/weapon_6_35",
+        midT: 35,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6260,7 +6257,7 @@ const skins = [{
     }, {
         name: "Red Drip",
         mid: 0,
-        midT: "weapons/weapon_6_36",
+        midT: 36,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6271,7 +6268,7 @@ const skins = [{
     }, {
         name: "Green Drip",
         mid: 0,
-        midT: "weapons/weapon_6_37",
+        midT: 37,
         scl: .9,
         mScl: 1,
         zOff: .28,
@@ -6551,7 +6548,7 @@ const skins = [{
     }, {
         name: "Quarantine",
         creator: "Floatingpoint",
-        midT: "weapons/weapon_6_39",
+        midT: 39,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -6578,7 +6575,7 @@ const skins = [{
     }, {
         name: "Sunset Raven",
         creator: "FlowerKid",
-        midT: "weapons/weapon_6_40",
+        midT: 40,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -6630,7 +6627,7 @@ const skins = [{
     }, {
         name: "Toxix",
         creator: "Kltter",
-        midT: "weapons/weapon_6_41",
+        midT: 41,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -6656,7 +6653,7 @@ const skins = [{
         seas: 2
     }, {
         name: "Incognito",
-        midT: "weapons/weapon_6_42",
+        midT: 42,
         creator: "cimota",
         mid: 0,
         scl: .9,
@@ -6675,7 +6672,7 @@ const skins = [{
     }, {
         name: "Scalar",
         creator: "floatingpoint",
-        midT: "weapons/weapon_6_43",
+        midT: 43,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -6687,7 +6684,7 @@ const skins = [{
     }, {
         name: "HotRod",
         creator: "Kltter",
-        midT: "weapons/weapon_6_44",
+        midT: 44,
         glow: !0,
         mid: 0,
         scl: .9,
@@ -6764,7 +6761,7 @@ const skins = [{
         seas: 2
     }, {
         name: "Thunder Serpent",
-        midT: "weapons/weapon_3_0",
+        midT: 0,
         glow: !0,
         noMuz: !0,
         mid: 0,
@@ -6802,7 +6799,7 @@ const skins = [{
     }, {
         name: "Moonlight",
         creator: "FlowerKid",
-        midT: "weapons/weapon_6_46",
+        midT: 46,
         glow: !0,
         mid: 0,
         scl: .9,
@@ -6867,6 +6864,9 @@ const skins = [{
         id: 125,
         creator: "FlowerKid",
         weapon: 2,
+        spnScl: 3.4,
+        yOff: .5,
+        xOff: -3,
         rarity: 3,
         glow: !0,
         seas: 2
@@ -6898,7 +6898,7 @@ const skins = [{
     }, {
         name: "Osiris' Servant",
         creator: "FlowerKid",
-        midT: "weapons/weapon_3_1",
+        midT: 1,
         glow: !0,
         minGlo: .35,
         noMuz: !0,
@@ -7132,7 +7132,7 @@ const skins = [{
         sitOffZ: -.63,
         xOff: -1,
         yOff: -.8,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Red Ribbon",
         limT: "Easter",
@@ -7159,7 +7159,7 @@ const skins = [{
         sitOff: -.9,
         sitOffZ: -.63,
         xOff: -.7,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Carrot Blades",
         limT: "Easter",
@@ -7174,7 +7174,7 @@ const skins = [{
         sitOffZ: -.3,
         xOff: -.4,
         yOff: -.6,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Chick N' Basket",
         limT: "Easter",
@@ -7188,7 +7188,7 @@ const skins = [{
         sitOff: -1.1,
         sitOffZ: -.63,
         xOff: -1,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Just N' Egg",
         limT: "Easter",
@@ -7202,7 +7202,7 @@ const skins = [{
         sitOff: -.5,
         sitOffZ: -.63,
         xOff: -1,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Egg Tamer",
         limT: "Easter",
@@ -7426,7 +7426,7 @@ const skins = [{
     }, {
         name: "Zig-Zag",
         limT: "Easter",
-        midT: "weapons/weapon_6_47",
+        midT: 47,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -7438,7 +7438,7 @@ const skins = [{
     }, {
         name: "Eco",
         limT: "Easter",
-        midT: "weapons/weapon_6_48",
+        midT: 48,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -7450,7 +7450,7 @@ const skins = [{
     }, {
         name: "Musk",
         limT: "Easter",
-        midT: "weapons/weapon_6_49",
+        midT: 49,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -7462,7 +7462,7 @@ const skins = [{
     }, {
         name: "Sugar Kiss",
         limT: "Easter",
-        midT: "weapons/weapon_6_50",
+        midT: 50,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -7474,7 +7474,7 @@ const skins = [{
     }, {
         name: "Candy",
         limT: "Easter",
-        midT: "weapons/weapon_6_51",
+        midT: 51,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -7487,7 +7487,7 @@ const skins = [{
         name: "Egg Catcher",
         limT: "Easter",
         creator: "FlowerKid",
-        midT: "weapons/weapon_6_52",
+        midT: 52,
         mid: 0,
         scl: .9,
         mScl: 1,
@@ -7500,7 +7500,7 @@ const skins = [{
         name: "Eggcellent",
         limT: "Easter",
         creator: "Cimota",
-        midT: "weapons/weapon_6_53",
+        midT: 53,
         glow: !0,
         mid: 0,
         scl: .9,
@@ -7571,7 +7571,7 @@ const skins = [{
     }, {
         name: "Ceretta 92",
         limT: "Easter",
-        midT: "weapons/weapon_3_2",
+        midT: 2,
         noMuz: !0,
         noEmis: !0,
         mid: 2,
@@ -7597,7 +7597,7 @@ const skins = [{
         sitOff: -.5,
         sitOffZ: -.63,
         xOff: -1,
-        xRot: 3.141592653589793
+        xRot: Math.PI
     }, {
         name: "Vertigo",
         limT: "Easter",
@@ -7628,6 +7628,7 @@ const skins = [{
         glow: !0
     }, {
         name: "RGB",
+        priceMlt: 4,
         id: 4,
         seas: 2,
         type: 5,
@@ -7643,6 +7644,4621 @@ const skins = [{
         movT: .0015,
         rarity: 5,
         seas: 2
+    }, {
+        name: "Hackusate",
+        mid: 0,
+        midT: 41,
+        weapon: 10,
+        rarity: 5,
+        rgb: !0,
+        rgbs: .5,
+        wire: !0,
+        seas: 3
+    }, {
+        name: "Raynb0w",
+        creator: "???",
+        pat: 1,
+        tex: "weapons/pat/1",
+        sameGlow: !0,
+        movT: .0015,
+        weapon: 15,
+        rarity: 5,
+        seas: 3
+    }, {
+        name: "Raynb0w",
+        creator: "???",
+        pat: 1,
+        tex: "weapons/pat/1",
+        sameGlow: !0,
+        movT: .0015,
+        weapon: 14,
+        rarity: 5,
+        seas: 3
+    }, {
+        name: "Coldsnap",
+        id: 9,
+        shirtCol: 2862847,
+        sleeveCol: 16449023,
+        pantsCol: 2862847,
+        shoeCol: 16449023,
+        seas: 3,
+        type: 5,
+        rarity: 4
+    }, {
+        name: "Crimson",
+        id: 5,
+        shirtCol: 16724787,
+        sleeveCol: 526344,
+        pantsCol: 16724787,
+        shoeCol: 526344,
+        seas: 3,
+        type: 5,
+        rarity: 4
+    }, {
+        name: "Lavender",
+        id: 6,
+        shirtCol: 11809791,
+        sleeveCol: 6501375,
+        pantsCol: 11809791,
+        shoeCol: 6501375,
+        seas: 3,
+        type: 5,
+        rarity: 4
+    }, {
+        name: "Royality",
+        id: 150,
+        creator: "Nxbulah",
+        weapon: 1,
+        rarity: 3,
+        seas: 3
+    }, {
+        name: "Firestorm",
+        id: 151,
+        creator: "Chromatikk",
+        weapon: 1,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Sense",
+        id: 152,
+        creator: "Nxbulah",
+        weapon: 1,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Yürei",
+        id: 153,
+        creator: "Jhonxay",
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Unistorm",
+        id: 154,
+        creator: "Skriller33",
+        weapon: 1,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Vaporride",
+        id: 155,
+        creator: "jonschmiddy",
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Alligator",
+        id: 156,
+        creator: "Skriller33",
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Hakan",
+        id: 157,
+        creator: "Nxbulah & Kilfy",
+        weapon: 1,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Jungle",
+        id: 158,
+        creator: "Skriller33",
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Void X",
+        id: 159,
+        creator: "floatingpoint",
+        glow: !0,
+        weapon: 1,
+        rarity: 3,
+        seas: 3
+    }, {
+        name: "Eira",
+        id: 160,
+        creator: "Nxbulah",
+        weapon: 1,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Neigh",
+        id: 161,
+        creator: "_irizu",
+        weapon: 1,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Akkoro",
+        id: 162,
+        creator: "FlowerKid",
+        weapon: 1,
+        rarity: 5,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Stickerbomb",
+        id: 163,
+        creator: "Luminae",
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Combined",
+        id: 164,
+        creator: "Kltter",
+        weapon: 1,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Wildstyle",
+        id: 165,
+        creator: "FlowerKid",
+        weapon: 1,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Nova",
+        id: 166,
+        creator: "FlowerKid",
+        weapon: 1,
+        rarity: 5,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "The Star",
+        id: 167,
+        creator: "Chromatikk",
+        weapon: 1,
+        rarity: 3,
+        seas: 3
+    }, {
+        name: "Lime",
+        id: 168,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        id: 169,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        id: 170,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        id: 171,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        id: 172,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        id: 173,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        id: 174,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        id: 175,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        id: 176,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        id: 177,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        id: 178,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        id: 179,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        id: 180,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        id: 181,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        id: 182,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        id: 183,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        id: 184,
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        id: 185,
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        id: 186,
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        id: 187,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        id: 188,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        id: 189,
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        id: 190,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        id: 191,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        id: 192,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        id: 193,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        id: 194,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        id: 195,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        id: 196,
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        id: 197,
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        id: 198,
+        weapon: 1,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        id: 199,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        id: 200,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        id: 201,
+        weapon: 1,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        id: 202,
+        weapon: 1,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Sagittarius",
+        id: 140,
+        creator: "Chromatikk",
+        weapon: 2,
+        rarity: 4,
+        seas: 3
+    }, {
+        name: "VAX",
+        id: 141,
+        creator: "KItter",
+        weapon: 2,
+        rarity: 2,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Wims",
+        id: 142,
+        creator: "Nxbulah",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Amaterasu",
+        id: 143,
+        creator: "KItter",
+        weapon: 2,
+        rarity: 3,
+        seas: 3
+    }, {
+        name: "Kanagawa",
+        id: 144,
+        creator: "FlowerKid",
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "AKS",
+        id: 145,
+        creator: "KItter",
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Fragternity",
+        id: 146,
+        creator: "FlowerKid",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Eurasian",
+        id: 147,
+        creator: "Cimota",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Ifrit",
+        id: 148,
+        creator: "FlowerKid",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Fantasy",
+        id: 149,
+        creator: "Luminae",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Apocalypse",
+        id: 150,
+        creator: "Lxckless",
+        weapon: 2,
+        rarity: 5,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Cheetah",
+        id: 151,
+        creator: "Skriller33",
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Krunkodore",
+        id: 152,
+        creator: "KItter",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Creature",
+        id: 153,
+        creator: "Jonschmiddy",
+        weapon: 2,
+        rarity: 3,
+        frames: 4,
+        frameT: 250,
+        seas: 3
+    }, {
+        name: "Disco",
+        id: 154,
+        creator: "Cimota",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Komics",
+        id: 155,
+        creator: "Nxbulah",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Toxic Nitro",
+        id: 156,
+        creator: "KItter",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Swarm",
+        id: 157,
+        creator: "Kilfy",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Letos",
+        id: 159,
+        creator: "Nxbulah",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Machinehead",
+        id: 160,
+        creator: "jonschmiddy",
+        weapon: 2,
+        rarity: 4,
+        frames: 4,
+        frameT: 100,
+        seas: 3
+    }, {
+        name: "Atheris",
+        id: 161,
+        creator: "Skriller33",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Akhenaten",
+        id: 162,
+        creator: "Nxbulah",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Futuristic",
+        id: 163,
+        creator: "Zinoob",
+        weapon: 2,
+        rarity: 5,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Raiju",
+        id: 164,
+        creator: "Kilfy",
+        weapon: 2,
+        rarity: 5,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Plague",
+        id: 165,
+        creator: "BigBBaniel",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Frostywolf",
+        id: 166,
+        creator: "Skriller33",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        frames: 2,
+        frameT: 250,
+        seas: 3
+    }, {
+        name: "Abducted",
+        id: 167,
+        creator: "Luminae",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Lime",
+        id: 168,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        id: 169,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        id: 170,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        id: 171,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        id: 172,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        id: 173,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        id: 174,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        id: 175,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        id: 176,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        id: 177,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        id: 178,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        id: 179,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        id: 180,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        id: 181,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        id: 182,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        id: 183,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        id: 184,
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        id: 185,
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        id: 186,
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        id: 187,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        id: 188,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        id: 189,
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        id: 190,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        id: 191,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        id: 192,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        id: 193,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        id: 194,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        id: 195,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        id: 196,
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        id: 197,
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        id: 198,
+        weapon: 2,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        id: 199,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        id: 200,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        id: 201,
+        weapon: 2,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        id: 202,
+        weapon: 2,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquarium",
+        id: 125,
+        creator: "Skriller33",
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Traveller",
+        id: 126,
+        creator: "KItter",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Abraxas",
+        id: 127,
+        creator: "Cimota",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Krunkstruct",
+        id: 128,
+        creator: "Cimota",
+        weapon: 4,
+        rarity: 2,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Bloodmoon",
+        id: 129,
+        creator: "Nxbulah",
+        weapon: 4,
+        rarity: 2,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Doodle",
+        id: 130,
+        creator: "Luminae",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "WildClaw",
+        id: 131,
+        creator: "FlowerKid",
+        weapon: 4,
+        rarity: 5,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Carcinogen",
+        id: 132,
+        creator: "Floatingpoint",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Spinner",
+        id: 133,
+        creator: "Cimota",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Green Waves",
+        id: 134,
+        creator: "Zinoob",
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Purple Waves",
+        id: 135,
+        creator: "Zinoob",
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Goddess",
+        id: 136,
+        creator: "FlowerKid",
+        weapon: 4,
+        rarity: 2,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Bahamut",
+        id: 137,
+        creator: "Kilfy",
+        weapon: 4,
+        rarity: 5,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Occult",
+        id: 138,
+        creator: "floatingpoint",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Merlin",
+        id: 139,
+        creator: "Cimota",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Kittle",
+        id: 140,
+        creator: "Kltter",
+        weapon: 4,
+        rarity: 2,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "TV Strike",
+        id: 141,
+        creator: "Kltter",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Composite",
+        id: 142,
+        creator: "Floatingpoint",
+        weapon: 4,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Taurine",
+        id: 143,
+        creator: "Chromatikk",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Vandal",
+        id: 144,
+        creator: "Nxbulah",
+        weapon: 4,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Amethyst",
+        id: 145,
+        creator: "Luminae",
+        weapon: 4,
+        rarity: 3,
+        frames: 4,
+        frameT: 250,
+        seas: 3
+    }, {
+        name: "Northern",
+        id: 146,
+        creator: "Luminae",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Agent",
+        id: 147,
+        creator: "Kltter",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Lester",
+        id: 148,
+        creator: "Kltter",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Lime",
+        id: 149,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        id: 150,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        id: 151,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        id: 152,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        id: 153,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        id: 154,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        id: 155,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        id: 156,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        id: 157,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        id: 158,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        id: 159,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        id: 160,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        id: 161,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        id: 162,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        id: 163,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        id: 164,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        id: 165,
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        id: 166,
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        id: 167,
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        id: 168,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        id: 169,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        id: 170,
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        id: 171,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        id: 172,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        id: 173,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        id: 174,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        id: 175,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        id: 176,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        id: 177,
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        id: 178,
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        id: 179,
+        weapon: 4,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        id: 180,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        id: 181,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        id: 182,
+        weapon: 4,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        id: 183,
+        weapon: 4,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Lineride",
+        midT: 54,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        pulsT: .0015,
+        creator: "Kltter",
+        weapon: 6,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Halogen",
+        midT: 55,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "floatingpoint",
+        weapon: 6,
+        rarity: 2,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Adventurine",
+        midT: 56,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Nxbulah",
+        weapon: 6,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Surreal",
+        midT: 57,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Nxbulah",
+        weapon: 6,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Red Supersport",
+        midT: 58,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Kltter",
+        weapon: 6,
+        rarity: 3,
+        seas: 3
+    }, {
+        name: "Pink Supersport",
+        midT: 59,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Kltter",
+        weapon: 6,
+        rarity: 3,
+        seas: 3
+    }, {
+        name: "Exponentiat",
+        midT: 60,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Cimota",
+        glow: !0,
+        weapon: 6,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Ethereal",
+        midT: 61,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Nxbulah",
+        weapon: 6,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Spectate",
+        midT: 62,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Cimota",
+        weapon: 6,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Sunburst",
+        midT: 63,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "FlowerKid",
+        weapon: 6,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Hydrofluric",
+        midT: 64,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Cimota",
+        weapon: 6,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Mech Rainbow",
+        midT: 65,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Luminae",
+        weapon: 6,
+        rarity: 2,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Midnight",
+        midT: 66,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        creator: "Luminae",
+        weapon: 6,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Lime",
+        midT: 67,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        midT: 68,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        midT: 69,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        midT: 70,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        midT: 71,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        midT: 72,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        midT: 73,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        midT: 74,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        midT: 75,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        midT: 76,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        midT: 77,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        midT: 78,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        midT: 79,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        midT: 80,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        midT: 81,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        midT: 82,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        midT: 83,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        midT: 84,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        midT: 85,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        midT: 86,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        midT: 87,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        midT: 88,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        midT: 89,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        midT: 90,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        midT: 91,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        midT: 92,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        midT: 93,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        midT: 94,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        midT: 95,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        midT: 96,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        midT: 97,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        midT: 98,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        midT: 99,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        midT: 100,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        midT: 101,
+        mid: 0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Excalibur",
+        id: 87,
+        creator: "Nxbulah",
+        weapon: 5,
+        rarity: 3,
+        seas: 3
+    }, {
+        name: "Zeus",
+        id: 88,
+        creator: "Kltter",
+        weapon: 5,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Luminous",
+        id: 89,
+        creator: "Nxbulah",
+        weapon: 5,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Depth",
+        id: 90,
+        creator: "jonschmiddy",
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Absinthe",
+        id: 91,
+        creator: "Cimota",
+        weapon: 5,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Scoria",
+        id: 92,
+        creator: "Cimota",
+        weapon: 5,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Krunkitis",
+        id: 93,
+        creator: "Electrode_",
+        weapon: 5,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Pearlescent",
+        id: 94,
+        creator: "Cimota",
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Zap",
+        id: 95,
+        creator: "Kilfy",
+        weapon: 5,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Midas",
+        id: 96,
+        creator: "FlowerKid",
+        weapon: 5,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Sea Wanderer",
+        id: 97,
+        creator: "Nxbulah",
+        weapon: 5,
+        rarity: 5,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Crystallize",
+        id: 98,
+        creator: "Cimota",
+        weapon: 5,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Lime",
+        id: 99,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        id: 100,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        id: 101,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        id: 102,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        id: 103,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        id: 104,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        id: 105,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        id: 106,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        id: 107,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        id: 108,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        id: 109,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        id: 110,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        id: 111,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        id: 112,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        id: 113,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        id: 114,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        id: 115,
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        id: 116,
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        id: 117,
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        id: 118,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        id: 119,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        id: 120,
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        id: 121,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        id: 122,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        id: 123,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        id: 124,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        id: 125,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        id: 126,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        id: 127,
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        id: 128,
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        id: 129,
+        weapon: 5,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        id: 130,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        id: 131,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        id: 132,
+        weapon: 5,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        id: 133,
+        weapon: 5,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Playmat",
+        creator: "Skriller33",
+        id: 67,
+        rarity: 4,
+        type: 4,
+        frames: 4,
+        frameT: 250,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Anti-cheat",
+        creator: "Bodeneinheit",
+        id: 68,
+        rarity: 4,
+        type: 4,
+        frames: 4,
+        frameT: 450,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Vince OP",
+        creator: "Bodeneinheit",
+        id: 69,
+        rarity: 2,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "200 IQ",
+        creator: "krunchiez",
+        id: 70,
+        rarity: 1,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Alien",
+        creator: "MBR7CLeo",
+        id: 71,
+        rarity: 1,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Krunkitis",
+        creator: "NvrRshABlyat",
+        id: 72,
+        rarity: 2,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "SMH",
+        creator: "OneEyedOwl",
+        id: 73,
+        rarity: 1,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Race",
+        creator: "ReDeagle",
+        id: 74,
+        rarity: 1,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Fair Trades",
+        creator: "Seasefire",
+        id: 75,
+        rarity: 2,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Lucky",
+        creator: "TrGPoTaTo",
+        id: 76,
+        rarity: 0,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Arrow",
+        creator: "TrGPoTaTo",
+        id: 77,
+        rarity: 0,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Dream",
+        creator: "Nxbulah",
+        id: 78,
+        rarity: 3,
+        type: 4,
+        keyW: "Spray",
+        seas: 3
+    }, {
+        name: "Sonar",
+        id: 81,
+        creator: "Cimota",
+        weapon: 7,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Icevein",
+        id: 82,
+        creator: "FlowerKid",
+        weapon: 7,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Demonvein",
+        id: 83,
+        creator: "FlowerKid",
+        weapon: 7,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Tartrazine",
+        id: 84,
+        creator: "Cimota",
+        weapon: 7,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Diopside",
+        id: 85,
+        creator: "Cimota",
+        weapon: 7,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Lime",
+        id: 86,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        id: 87,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        id: 88,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        id: 89,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        id: 90,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        id: 91,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        id: 92,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        id: 93,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        id: 94,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        id: 95,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        id: 96,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        id: 97,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        id: 98,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        id: 99,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        id: 100,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        id: 101,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        id: 102,
+        weapon: 7,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        id: 103,
+        weapon: 7,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        id: 104,
+        weapon: 7,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        id: 105,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        id: 106,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        id: 107,
+        weapon: 7,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        id: 108,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        id: 109,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        id: 110,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        id: 111,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        id: 112,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        id: 113,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        id: 114,
+        weapon: 7,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        id: 115,
+        weapon: 7,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        id: 116,
+        weapon: 7,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        id: 117,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        id: 118,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        id: 119,
+        weapon: 7,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        id: 120,
+        weapon: 7,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Ballistic Knife",
+        id: 9,
+        rarity: 4,
+        type: 3,
+        sxOff: .4,
+        scl: 1.4,
+        yOff: -2,
+        keyW: "Melee",
+        seas: 3
+    }, {
+        name: "Samurai Sword",
+        id: 10,
+        rarity: 4,
+        type: 3,
+        sxRot: -.2,
+        syOff: .1,
+        szOff: .2,
+        scl: .8,
+        yOff: -1,
+        xOff: -1,
+        keyW: "Melee",
+        seas: 3
+    }, {
+        name: "Acid Razer",
+        id: 11,
+        rarity: 5,
+        type: 3,
+        sxOff: .02,
+        sclMlt: 1.1,
+        scl: 2,
+        yOff: -2,
+        glow: !0,
+        pulsT: .1,
+        keyW: "Melee",
+        seas: 3
+    }, {
+        name: "Lumus",
+        tex: 1,
+        id: 11,
+        rarity: 5,
+        sxOff: .02,
+        sclMlt: 1.1,
+        glow: !0,
+        scl: 2,
+        yOff: -2,
+        pulsT: .1,
+        type: 3,
+        keyW: "Melee",
+        seas: 3
+    }, {
+        name: "Heated Crowbar",
+        id: 12,
+        rarity: 5,
+        type: 3,
+        scl: .8,
+        yOff: -1,
+        xOff: -.5,
+        keyW: "Melee",
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Disintegrator",
+        mid: 0,
+        glow: !0,
+        pulsT: .03,
+        seas: 3,
+        weapon: 2,
+        rarity: 6
+    }, {
+        name: "Artifact XY",
+        id: 0,
+        weapon: 12,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 3
+    }, {
+        name: "Anti-Matter",
+        mid: 4,
+        glow: !0,
+        pulsT: .0015,
+        scl: .9,
+        mScl: 1,
+        spnScl: 1.35,
+        zOff: -.25,
+        seas: 3,
+        yOff: .05,
+        weapon: 1,
+        rarity: 6
+    }, {
+        name: "Good Ol' Days",
+        mid: 3,
+        pulsT: .0015,
+        scl: .9,
+        mScl: 1,
+        spnScl: 1.35,
+        zOff: -.25,
+        seas: 3,
+        yOff: .05,
+        weapon: 1,
+        rarity: 5
+    }, {
+        name: "Blonde Beard",
+        id: 69,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Brown Beard",
+        tex: 1,
+        id: 69,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Aged Beard",
+        id: 70,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Bandito",
+        id: 71,
+        rarity: 4,
+        glow: !0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Purple Beanie",
+        id: 72,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1.5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Red Beanie",
+        tex: 1,
+        id: 72,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1.5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Blue Pom-Pom",
+        id: 73,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1.5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Green Pom-Pom",
+        tex: 1,
+        id: 73,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1.5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Love-Cap",
+        id: 74,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1.5,
+        xOff: 1,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Lucky-Cap",
+        tex: 1,
+        id: 74,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1.5,
+        xOff: -1,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Chef",
+        id: 75,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1.5,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Hypno",
+        id: 76,
+        rarity: 3,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Hotdogger",
+        id: 77,
+        rarity: 2,
+        type: 1,
+        keyW: "Hat",
+        noHead: !0,
+        sclMlt: .7,
+        sitOff: .71,
+        seas: 3
+    }, {
+        name: "Sunflower",
+        id: 78,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Lavender",
+        tex: 1,
+        id: 78,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Cirangle",
+        id: 79,
+        rarity: 3,
+        glow: !0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: 1.5,
+        yOff: -4,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Django",
+        id: 80,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1.5,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Cattleman",
+        tex: 1,
+        id: 80,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1.5,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Chosen One",
+        id: 81,
+        rarity: 4,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1,
+        sclMlt: .62,
+        sitOff: -.35,
+        rAnim: -.004,
+        rAnimA: "y",
+        seas: 3
+    }, {
+        name: "Sailor",
+        id: 82,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1.5,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Planetarium",
+        id: 83,
+        rarity: 5,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: -.68,
+        rAnim: -.0016,
+        rAnimA: "y",
+        seas: 3
+    }, {
+        name: "Acid Reaper",
+        id: 84,
+        rarity: 4,
+        glow: !0,
+        noHead: !0,
+        type: 1,
+        keyW: "Hat",
+        xOff: .5,
+        yOff: -.5,
+        sclMlt: .5,
+        sitOff: 1.05,
+        seas: 3
+    }, {
+        name: "Ushanka",
+        id: 85,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1.5,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Private",
+        id: 86,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Sergeant",
+        id: 87,
+        rarity: 2,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Undead",
+        id: 88,
+        rarity: 4,
+        glow: !0,
+        noHead: !0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Witch",
+        id: 89,
+        rarity: 2,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1.5,
+        sclMlt: .5,
+        xOff: 1,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Farmer",
+        id: 90,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Helper",
+        tex: 1,
+        id: 90,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Purple Bandana",
+        id: 91,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Red Bandana",
+        tex: 1,
+        id: 91,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Rave Glasses",
+        id: 92,
+        rarity: 3,
+        glow: !0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        spnScl: 1.6,
+        xOff: 2,
+        yOff: -2,
+        sitOff: 1,
+        seas: 3
+    }, {
+        name: "Blue Headband",
+        id: 93,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1,
+        sitOff: 1,
+        seas: 3
+    }, {
+        name: "Red Headband",
+        tex: 1,
+        id: 93,
+        rarity: 0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1,
+        sitOff: 1,
+        seas: 3
+    }, {
+        name: "Shlem",
+        id: 94,
+        rarity: 3,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1,
+        sitOff: .9,
+        seas: 3
+    }, {
+        name: "Headshot",
+        id: 95,
+        rarity: 3,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1,
+        sitOff: .9,
+        xOff: .5,
+        yOff: -1,
+        seas: 3
+    }, {
+        name: "Big Apple",
+        id: 96,
+        rarity: 2,
+        type: 1,
+        keyW: "Hat",
+        noHead: !0,
+        sclMlt: .56,
+        sitOff: .75,
+        seas: 3
+    }, {
+        name: "Green Alien",
+        id: 97,
+        rarity: 3,
+        type: 1,
+        keyW: "Hat",
+        noHead: !0,
+        sclMlt: .65,
+        spnScl: 1.2,
+        sitOff: .62,
+        seas: 3
+    }, {
+        name: "Purple Alien",
+        tex: 1,
+        id: 97,
+        rarity: 3,
+        type: 1,
+        keyW: "Hat",
+        noHead: !0,
+        sclMlt: .65,
+        spnScl: 1.2,
+        sitOff: .62,
+        seas: 3
+    }, {
+        name: "Banananana",
+        id: 98,
+        rarity: 2,
+        type: 1,
+        keyW: "Hat",
+        noHead: !0,
+        sclMlt: .6,
+        sitOff: .71,
+        seas: 3
+    }, {
+        name: "Coolman",
+        id: 99,
+        rarity: 2,
+        type: 1,
+        keyW: "Hat",
+        noHead: !0,
+        sclMlt: .56,
+        sitOff: .75,
+        seas: 3
+    }, {
+        name: "Green Headset",
+        id: 100,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1.5,
+        sitOff: .9,
+        seas: 3
+    }, {
+        name: "Red Headset",
+        tex: 1,
+        id: 100,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1.5,
+        sclMlt: .5,
+        sitOff: .9,
+        seas: 3
+    }, {
+        name: "Bot 1",
+        id: 101,
+        rarity: 4,
+        glow: !0,
+        frames: 4,
+        frameT: 250,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .9,
+        seas: 3
+    }, {
+        name: "Mustache",
+        id: 102,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: 2.2,
+        spnScl: 1.2,
+        yOff: -1,
+        xOff: 3,
+        sitOff: .9,
+        seas: 3
+    }, {
+        name: "Bane",
+        id: 103,
+        rarity: 3,
+        glow: !0,
+        type: 1,
+        keyW: "Hat",
+        yOff: -1,
+        sclMlt: .5,
+        sitOff: .8,
+        seas: 3
+    }, {
+        name: "Ducky",
+        id: 104,
+        rarity: 2,
+        type: 1,
+        noHead: !0,
+        keyW: "Hat",
+        sclMlt: .8,
+        spnScl: 1.4,
+        xOff: .5,
+        yOff: -1,
+        sitOff: .75,
+        seas: 3
+    }, {
+        name: "Pot",
+        id: 105,
+        rarity: 1,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8,
+        xOff: -1.5,
+        yOff: -.5,
+        seas: 3
+    }, {
+        name: "Boom Boxer",
+        id: 106,
+        rarity: 4,
+        glow: !0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .6,
+        sitOff: .8,
+        yOff: -1,
+        seas: 3
+    }, {
+        name: "Santa",
+        id: 107,
+        rarity: 3,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .9,
+        xOff: -1,
+        yOff: -1,
+        seas: 3
+    }, {
+        name: "Splinter",
+        id: 108,
+        rarity: 4,
+        glow: !0,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .7,
+        seas: 3
+    }, {
+        name: "Wizard",
+        id: 109,
+        rarity: 2,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .7,
+        yOff: -1,
+        seas: 3
+    }, {
+        name: "Hackusate",
+        id: 203,
+        weapon: 2,
+        rarity: 5,
+        rgb: !0,
+        rgbs: .5,
+        wire: !0,
+        seas: 3
+    }, {
+        name: "Hackusate",
+        id: 184,
+        weapon: 4,
+        rarity: 5,
+        rgb: !0,
+        rgbs: .5,
+        wire: !0,
+        seas: 3
+    }, {
+        name: "Hackusate",
+        id: 121,
+        weapon: 7,
+        rarity: 5,
+        rgb: !0,
+        rgbs: .5,
+        wire: !0,
+        seas: 3
+    }, {
+        name: "Hackusate",
+        id: 74,
+        weapon: 9,
+        rarity: 5,
+        rgb: !0,
+        rgbs: .5,
+        wire: !0,
+        seas: 3
+    }, {
+        name: "Flag",
+        id: 32,
+        rarity: 1,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2,
+        sitOff: -1.3,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "KrunkBoy",
+        id: 33,
+        rarity: 3,
+        frames: 4,
+        frameT: 500,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.2,
+        spnScl: 4,
+        xRot: 2,
+        sitOff: -.7,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Skeleton Grip",
+        id: 34,
+        rarity: 2,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.2,
+        spnScl: 2.4,
+        sitOff: -.7,
+        sitOffZ: -.65,
+        seas: 3
+    }, {
+        name: "Spider Grip",
+        tex: 1,
+        id: 34,
+        rarity: 2,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.2,
+        spnScl: 2.4,
+        xOff: -1,
+        sitOff: -.7,
+        sitOffZ: -.65,
+        seas: 3
+    }, {
+        name: "Sir HotDog",
+        id: 35,
+        rarity: 2,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        xRot: 2,
+        xOff: -1.5,
+        yOff: -.5,
+        spnScl: 2.6,
+        sitOff: -.1,
+        sitOffZ: -.65,
+        seas: 3
+    }, {
+        name: "Green Kite",
+        id: 36,
+        rarity: 0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        sitOff: -1.1,
+        sitOffZ: -.65,
+        seas: 3
+    }, {
+        name: "Lantern",
+        id: 37,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.6,
+        sitOff: -.75,
+        sitOffZ: -.75,
+        seas: 3
+    }, {
+        name: "Hellbound",
+        id: 38,
+        rarity: 3,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        xOff: -3,
+        yOff: -1,
+        sitOff: -1.1,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Nuke",
+        id: 39,
+        rarity: 3,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 3,
+        xOff: -3,
+        xRot: 2,
+        sitOff: -1.1,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Roman Shield",
+        id: 40,
+        rarity: 2,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.6,
+        spnScl: 2.6,
+        xOff: -2,
+        xRot: 2,
+        sitOff: -.85,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Krunky Safe",
+        id: 41,
+        rarity: 1,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        xRot: 2,
+        xOff: -2,
+        sitOff: -1.1,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Yellow Scuba",
+        id: 43,
+        rarity: 1,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        sitOff: -1.1,
+        sitOffZ: -.6,
+        xOff: -2,
+        seas: 3
+    }, {
+        name: "Blue Scuba",
+        tex: 1,
+        id: 43,
+        rarity: 1,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        sitOff: -1.1,
+        sitOffZ: -.6,
+        xOff: -2,
+        seas: 3
+    }, {
+        name: "Agares",
+        id: 44,
+        rarity: 4,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.2,
+        spnScl: 2.4,
+        xOff: -1,
+        zOff: 1,
+        sitOff: -.9,
+        sitOffZ: -.6,
+        trans: !0,
+        seas: 3
+    }, {
+        name: "Red Ski",
+        id: 45,
+        rarity: 1,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        xOff: -1,
+        sitOff: -.9,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Green Ski",
+        tex: 1,
+        id: 45,
+        rarity: 1,
+        type: 2,
+        keyW: "Body",
+        spnScl: 2.6,
+        xOff: -1,
+        sclMlt: 2.4,
+        sitOff: -.9,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Black Widow",
+        id: 46,
+        rarity: 5,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        xOff: -1,
+        sitOff: -.9,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Viking",
+        id: 48,
+        rarity: 3,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        xOff: -2,
+        zOff: -1,
+        xRot: 2,
+        sitOff: -.9,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Kruncade",
+        id: 50,
+        rarity: 3,
+        frames: 2,
+        frameT: 250,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        xRot: 2,
+        xOff: -1.5,
+        yOff: -.5,
+        spnScl: 2.6,
+        sitOff: -1,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Fully Loaded",
+        id: 51,
+        rarity: 3,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        sitOff: -1.1,
+        sitOffZ: -.6,
+        xOff: -2,
+        spnScl: 2.6,
+        seas: 3
+    }, {
+        name: "1 Year Cape",
+        id: 52,
+        rarity: 5,
+        side: 2,
+        glow: !0,
+        noSale: !0,
+        limited: !0,
+        type: 2,
+        keyW: "Body",
+        xRot: 2,
+        xOff: -1.5,
+        yOff: -.5,
+        spnScl: 2.6,
+        sclMlt: 2.4,
+        sitOff: -.5,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "2 Year Cape",
+        tex: 1,
+        id: 52,
+        rarity: 5,
+        side: 2,
+        glow: !0,
+        noSale: !0,
+        limited: !0,
+        type: 2,
+        keyW: "Body",
+        xRot: 2,
+        xOff: -1.5,
+        yOff: -.5,
+        spnScl: 2.6,
+        sclMlt: 2.4,
+        sitOff: -.5,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Arunasura",
+        id: 53,
+        rarity: 4,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        xOff: -2.5,
+        yOff: -2,
+        xRot: -.5,
+        spnScl: 2.6,
+        sclMlt: 2.4,
+        sitOff: -.65,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Barong",
+        tex: 1,
+        id: 53,
+        rarity: 4,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        xOff: -1,
+        yOff: 2,
+        spnScl: 2.6,
+        sclMlt: 2.4,
+        sitOff: -.65,
+        sitOffZ: -.6,
+        seas: 3
+    }, {
+        name: "Pink Glazed",
+        id: 54,
+        rarity: 0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        xOff: -2,
+        sitOff: -.5,
+        sitOffZ: -.7,
+        seas: 3
+    }, {
+        name: "Blue Glazed",
+        tex: 1,
+        id: 54,
+        rarity: 0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        xOff: -2,
+        sitOff: -.5,
+        sitOffZ: -.7,
+        seas: 3
+    }, {
+        name: "Krunk-Bull",
+        id: 55,
+        rarity: 0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        spnScl: 2.6,
+        xOff: -2,
+        sitOff: -1.4,
+        sitOffZ: -.7,
+        seas: 3
+    }, {
+        name: "Soul Reaper",
+        tex: 1,
+        id: 84,
+        rarity: 4,
+        glow: !0,
+        noHead: !0,
+        type: 1,
+        keyW: "Hat",
+        xOff: 1,
+        yOff: -.5,
+        sclMlt: .5,
+        sitOff: 1.05,
+        seas: 3
+    }, {
+        name: "Terra",
+        id: 7,
+        shirtCol: 1486651,
+        sleeveCol: 1842204,
+        pantsCol: 1486651,
+        shoeCol: 1842204,
+        seas: 3,
+        type: 5,
+        rarity: 4
+    }, {
+        name: "Amberite",
+        id: 8,
+        shirtCol: 16765734,
+        sleeveCol: 1842204,
+        pantsCol: 16765734,
+        shoeCol: 1842204,
+        seas: 3,
+        type: 5,
+        rarity: 4
+    }, {
+        name: "Nova Semi",
+        blocked: !0,
+        noSale: !0,
+        mid: 0,
+        midT: 0,
+        seas: 3,
+        weapon: 8,
+        rarity: 0
+    }, {
+        name: "Shift",
+        mid: 0,
+        midT: 2,
+        creator: "Luminae",
+        weapon: 8,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Lepton",
+        mid: 0,
+        midT: 3,
+        creator: "jonschmiddy",
+        weapon: 8,
+        rarity: 4,
+        pulsT: .0015,
+        frames: 4,
+        frameT: 250,
+        seas: 3
+    }, {
+        name: "Dessolate",
+        mid: 0,
+        midT: 4,
+        creator: "Nxbulah",
+        weapon: 8,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Retro Beast",
+        mid: 0,
+        midT: 5,
+        creator: "Luminae",
+        weapon: 8,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Lime",
+        mid: 0,
+        midT: 6,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        mid: 0,
+        midT: 7,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        mid: 0,
+        midT: 8,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        mid: 0,
+        midT: 9,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        mid: 0,
+        midT: 10,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        mid: 0,
+        midT: 11,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        mid: 0,
+        midT: 12,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        mid: 0,
+        midT: 13,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        mid: 0,
+        midT: 14,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        mid: 0,
+        midT: 15,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        mid: 0,
+        midT: 16,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        mid: 0,
+        midT: 17,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        mid: 0,
+        midT: 18,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        mid: 0,
+        midT: 19,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        mid: 0,
+        midT: 20,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        mid: 0,
+        midT: 21,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        mid: 0,
+        midT: 22,
+        weapon: 8,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        mid: 0,
+        midT: 23,
+        weapon: 8,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        mid: 0,
+        midT: 24,
+        weapon: 8,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        mid: 0,
+        midT: 25,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        mid: 0,
+        midT: 26,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        mid: 0,
+        midT: 27,
+        weapon: 8,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        mid: 0,
+        midT: 28,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        mid: 0,
+        midT: 29,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        mid: 0,
+        midT: 30,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        mid: 0,
+        midT: 31,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        mid: 0,
+        midT: 32,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        mid: 0,
+        midT: 33,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        mid: 0,
+        midT: 34,
+        weapon: 8,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        mid: 0,
+        midT: 35,
+        weapon: 8,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        mid: 0,
+        midT: 36,
+        weapon: 8,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        mid: 0,
+        midT: 37,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        mid: 0,
+        midT: 38,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        mid: 0,
+        midT: 39,
+        weapon: 8,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        mid: 0,
+        midT: 40,
+        weapon: 8,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Nova Uzi",
+        mid: 0,
+        midT: 0,
+        blocked: !0,
+        noSale: !0,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Krystal",
+        mid: 0,
+        midT: 40,
+        creator: "KItter",
+        weapon: 10,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Corrosive",
+        mid: 0,
+        midT: 1,
+        creator: "Jonschmiddy",
+        weapon: 10,
+        rarity: 3,
+        frames: 4,
+        frameT: 250,
+        seas: 3
+    }, {
+        name: "Kitta",
+        mid: 0,
+        midT: 2,
+        creator: "KItter",
+        weapon: 10,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Plasma Grime",
+        mid: 0,
+        midT: 3,
+        creator: "Cimota",
+        weapon: 10,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Graffiti",
+        mid: 0,
+        midT: 4,
+        creator: "Maple",
+        weapon: 10,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Lime",
+        mid: 0,
+        midT: 5,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        mid: 0,
+        midT: 6,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        mid: 0,
+        midT: 7,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        mid: 0,
+        midT: 8,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        mid: 0,
+        midT: 9,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        mid: 0,
+        midT: 10,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        mid: 0,
+        midT: 11,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        mid: 0,
+        midT: 12,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        mid: 0,
+        midT: 13,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        mid: 0,
+        midT: 14,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        mid: 0,
+        midT: 15,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        mid: 0,
+        midT: 16,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        mid: 0,
+        midT: 17,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        mid: 0,
+        midT: 18,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        mid: 0,
+        midT: 19,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        mid: 0,
+        midT: 20,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        mid: 0,
+        midT: 21,
+        weapon: 10,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        mid: 0,
+        midT: 22,
+        weapon: 10,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        mid: 0,
+        midT: 23,
+        weapon: 10,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        mid: 0,
+        midT: 24,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        mid: 0,
+        midT: 25,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        mid: 0,
+        midT: 26,
+        weapon: 10,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        mid: 0,
+        midT: 27,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        mid: 0,
+        midT: 28,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        mid: 0,
+        midT: 29,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        mid: 0,
+        midT: 30,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        mid: 0,
+        midT: 31,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        mid: 0,
+        midT: 32,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        mid: 0,
+        midT: 33,
+        weapon: 10,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        mid: 0,
+        midT: 34,
+        weapon: 10,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        mid: 0,
+        midT: 35,
+        weapon: 10,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        mid: 0,
+        midT: 36,
+        weapon: 10,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        mid: 0,
+        midT: 37,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        mid: 0,
+        midT: 38,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        mid: 0,
+        midT: 39,
+        weapon: 10,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Fireburst",
+        id: 81,
+        creator: "jonschmiddy",
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Moldavite",
+        id: 82,
+        creator: "Cimota",
+        weapon: 15,
+        rarity: 2,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Wyvern",
+        id: 83,
+        creator: "Nxbulah",
+        weapon: 15,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Forbidden",
+        id: 84,
+        creator: "Nxbulah",
+        weapon: 15,
+        rarity: 4,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Lxd",
+        id: 85,
+        creator: "Nxbulah",
+        weapon: 15,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Scribble",
+        id: 86,
+        creator: "FlowerKid",
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peruvia",
+        id: 87,
+        creator: "Nxbulah",
+        weapon: 15,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Caged",
+        id: 88,
+        creator: "FlowerKid",
+        weapon: 15,
+        rarity: 3,
+        glow: !0,
+        seas: 3
+    }, {
+        name: "Lime",
+        id: 89,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Berry",
+        id: 90,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Indigo",
+        id: 91,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Citrus",
+        id: 92,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tangerine",
+        id: 93,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Grape",
+        id: 94,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Canvas",
+        id: 95,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Libra",
+        id: 96,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Psychedelic",
+        id: 97,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Violette",
+        id: 98,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Marv",
+        id: 99,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Basel",
+        id: 100,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Tiger Blood",
+        id: 101,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Scalamandre",
+        id: 102,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Tiger Maine",
+        id: 103,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Leopard",
+        id: 104,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Metallic Swirl",
+        id: 105,
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Tessilate",
+        id: 106,
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Bubblegum",
+        id: 107,
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Peppermint",
+        id: 108,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Spearmint",
+        id: 109,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Obsydian",
+        id: 110,
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Pink Panther",
+        id: 111,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Amber",
+        id: 112,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Clover",
+        id: 113,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Multicam",
+        id: 114,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Aquaric",
+        id: 115,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Heather",
+        id: 116,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Carbonfibre",
+        id: 117,
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Cobra",
+        id: 118,
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Python",
+        id: 119,
+        weapon: 15,
+        rarity: 2,
+        seas: 3
+    }, {
+        name: "Lost",
+        id: 120,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Blue Maze",
+        id: 121,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Yellow Maze",
+        id: 122,
+        weapon: 15,
+        rarity: 0,
+        seas: 3
+    }, {
+        name: "Morgana",
+        id: 123,
+        weapon: 15,
+        rarity: 1,
+        seas: 3
+    }, {
+        name: "Timeless",
+        creator: "Chromatikk",
+        keyW: "Knife",
+        id: 3,
+        tex: 12,
+        type: 3,
+        scl: 2.6,
+        seas: 3,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 3,
+        sxRot: .3,
+        sxOff: .1
+    }, {
+        name: "Crimson Tiger",
+        creator: "Kltter",
+        keyW: "Knife",
+        id: 3,
+        tex: 7,
+        type: 3,
+        scl: 2.6,
+        seas: 3,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 3,
+        sxRot: .3,
+        sxOff: .1
+    }, {
+        name: "Vaporblade",
+        creator: "Jonschmiddy",
+        keyW: "Knife",
+        id: 3,
+        tex: 8,
+        type: 3,
+        scl: 2.6,
+        seas: 3,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 3,
+        sxRot: .3,
+        sxOff: .1
+    }, {
+        name: "Verdant",
+        creator: "Jonschmiddy",
+        keyW: "Knife",
+        id: 3,
+        tex: 9,
+        type: 3,
+        scl: 2.6,
+        seas: 3,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 3,
+        sxRot: .3,
+        sxOff: .1
+    }, {
+        name: "Zvilpogghua",
+        creator: "Jonschmiddy",
+        keyW: "Knife",
+        id: 3,
+        tex: 10,
+        frames: 4,
+        frameT: 250,
+        type: 3,
+        scl: 2.6,
+        seas: 3,
+        glow: !0,
+        pulsT: .0015,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 4,
+        sxRot: .3,
+        sxOff: .1
+    }, {
+        name: "Volcanic",
+        creator: "BigBBaniel",
+        keyW: "Knife",
+        id: 3,
+        tex: 11,
+        glow: !0,
+        frames: 4,
+        frameT: 250,
+        type: 3,
+        scl: 2.6,
+        seas: 3,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 4,
+        sxRot: .3,
+        sxOff: .1
+    }, {
+        name: "Flintstone",
+        creator: "Skriller33",
+        keyW: "Knife",
+        animInd: 1,
+        glow: !0,
+        pulsT: .1,
+        id: 2,
+        tex: 2,
+        type: 3,
+        scl: 3,
+        seas: 3,
+        sclMlt: .98,
+        yOff: -2,
+        rarity: 4
+    }, {
+        name: "Raynb0w",
+        creator: "???",
+        keyW: "Knife",
+        pat: 1,
+        tex: "weapons/pat/1",
+        movT: .0015,
+        id: 0,
+        type: 3,
+        scl: 2.3,
+        seas: 3,
+        sclMlt: .9,
+        yOff: -2,
+        rarity: 5
+    }, {
+        name: "C0b4lt",
+        creator: "???",
+        pat: 5,
+        tex: "weapons/pat/5",
+        sameGlow: !0,
+        movT: 5e-4,
+        seas: 3,
+        weapon: 16,
+        rarity: 5
+    }, {
+        name: "Shattered Asura",
+        id: 53,
+        tex: 2,
+        rarity: 5,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        sclMlt: 2.4,
+        sitOff: -.65,
+        sitOffZ: -.6,
+        seas: 3,
+        movT: 3e-4
+    }, {
+        name: "Pellucid",
+        creator: "???",
+        pat: 8,
+        tex: "weapons/pat/8",
+        sameGlow: !0,
+        movT: 3e-4,
+        weapon: 1,
+        opac: .6,
+        rarity: 5,
+        seas: 3
+    }, {
+        name: "Pellucid",
+        creator: "???",
+        pat: 8,
+        tex: "weapons/pat/8",
+        sameGlow: !0,
+        movT: 3e-4,
+        weapon: 2,
+        opac: .6,
+        rarity: 5,
+        seas: 3
+    }, {
+        name: "Pellucid",
+        creator: "???",
+        mid: 0,
+        midT: 102,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        sameGlow: !0,
+        movT: 3e-4,
+        weapon: 6,
+        opac: .6,
+        rarity: 5,
+        seas: 3
+    }, {
+        name: "Soul Harvest",
+        id: 53,
+        tex: 3,
+        rarity: 5,
+        glow: !0,
+        type: 2,
+        opac: .6,
+        keyW: "Body",
+        sclMlt: 2.4,
+        sitOff: -.65,
+        sitOffZ: -.6,
+        seas: 3,
+        movT: 3e-4
+    }, {
+        name: "Hackusate",
+        id: 203,
+        weapon: 1,
+        rarity: 5,
+        rgb: !0,
+        rgbs: .5,
+        wire: !0,
+        seas: 3
     }],
     rarities = [{
         name: "Uncommon",
@@ -7673,4 +12289,12 @@ const skins = [{
         rar: 0,
         color: "#fff53d",
         animate: !0
-    }];
+    }],
+    types = [
+        "weapons/weapon_",
+        "hats/hat_",
+        "body/body_",
+        "melee/melee_",
+        "sprays/",
+        "dyes/"
+    ]
