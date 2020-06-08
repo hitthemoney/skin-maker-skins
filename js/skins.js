@@ -6794,7 +6794,7 @@ const skins = [{
 }, {
     "name": "Trix",
     "id": 83,
-    "creator": "Jhonxay",
+    "creator": "Kitter",
     "weapon": 5,
     "rarity": 3,
     "glow": true,
