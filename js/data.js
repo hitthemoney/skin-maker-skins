@@ -10111,7 +10111,6 @@ const skins = [{
         seas: 3
     }, {
         name: "Samurai Sword",
-        creator: "FlowerKid",
         id: 10,
         rarity: 4,
         type: 3,
