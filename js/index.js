@@ -48,8 +48,10 @@ function startUp() {
     getVersion();
     this.url = new URL(document.URL);
     this.creator = url.searchParams.get("creator");
-    if (creator.toLowerCase() == "everyone") {
-        window.location = "https://yee.how/item-list/"
+    if (creator !== null) {
+        if (creator.toLowerCase() == "everyone") {
+            window.location = "https://yee.how/item-list/"
+        }
     }
     this.showImg = stringToBool(url.searchParams.get("showImg"));
     this.input = document.getElementById("skinmakerName");
@@ -152,7 +154,10 @@ function getSkinsByCreator(creator, numB) {
             return [skinsByCreatorArray, skinsByCreatorArray2];
         }
     } else {
-        return [[],[]];
+        return [
+            [],
+            []
+        ];
     }
 };
 
