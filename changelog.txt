@@ -1,4 +1,7 @@
-v1.3.5
+v1.3.6
+
+Update v1.3.6
+- New Krunker Update, so new skins.
 
 Update v1.3.5
 - Added the creator "Everyone" (Onclick it redirects to https://yee.how/item-list)
