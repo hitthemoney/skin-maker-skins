@@ -1,4 +1,7 @@
-v1.3.6
+v1.3.7
+
+Update v1.3.7
+- New Krunker Update, so again new skins.
 
 Update v1.3.6
 - New Krunker Update, so new skins.
