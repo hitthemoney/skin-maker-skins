@@ -1,4 +1,4 @@
-[{
+const skins = [{
         name: "Arctic Hunt",
         id: 0,
         weapon: 1,
