@@ -17160,7 +17160,7 @@ const skins = [
     "seas": 3,
     "i": 1723
   }
-];,
+],
     rarities = [{
         name: "Uncommon",
         rar: 60,
