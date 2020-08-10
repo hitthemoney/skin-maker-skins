@@ -69,62 +69,71 @@ function getSkinsByCreator(creator, numB) {
             arrayLength = skins.length,
             skinsByCreatorArray = [],
             skinsByCreatorArray2 = [],
+            skinsByCreatorArray3 = [],
             creator1 = creator,
             creator2 = creator;
         var skinCreator,
             skinCreator1,
             skinCreator2,
             lowcCreator = creator.toLowerCase();
-        if (lowcCreator == "krunker") {
-            creator1 = "krunker.io"
-        } else if (lowcCreator == "jon") {
-            creator1 = "jonschmiddy"
-        } else if (lowcCreator == "spy") {
-            creator1 = "ispy"
-        } else if (lowcCreator == "blitz") {
-            creator1 = "blitz-.";
-            creator2 = "blitz"
-        } else if (lowcCreator == "blitz-.") {
-            creator1 = "blitz-.";
-            creator2 = "blitz"
-        } else if (lowcCreator == "halloluke") {
-            creator1 = "halloluke0201"
-        } else if (lowcCreator == "irizu") {
-            creator1 = "_irizu"
-        } else if (lowcCreator == "vx_bomb") {
-            creator1 = "vx bomb"
-        } else if (lowcCreator == "electrode") {
-            creator1 = "electrode";
-            creator2 = "electrode_"
-        } else if (lowcCreator == "electrode_") {
-            creator1 = "electrode";
-            creator2 = "electrode_"
-        } else if (lowcCreator == "float") {
-            creator1 = "floatingpoint"
-        } else if (lowcCreator == "kltter") {
-            creator1 = "kitter";
-            creator2 = "kltter"
-        } else if (lowcCreator == "kitter") {
-            creator1 = "kitter";
-            creator2 = "kltter"
-        } else if (lowcCreator == "zino") {
-            creator1 = "zino";
-            creator2 = "zinoob"
-        } else if (lowcCreator == "zinoob") {
-            creator1 = "zino";
-            creator2 = "zinoob"
-        } else if (lowcCreator == "jhonxay") {
-            creator1 = "jhonxay_playz";
-            creator2 = "jhonxay"
-        } else if (lowcCreator == "jhonxay_playz") {
-            creator1 = "jhonxay";
-            creator2 = "jhonxay_playz"
-        } else if (lowcCreator == "omar") {
-            creator1 = "0mar"
-        } else if (lowcCreator == "porg") {
-            creator1 = "edibleporg"
-        } else if (lowcCreator == "nightlybuild") {
-            creator1 = "nightly-build7"
+        switch (lowcCreator) {
+            case "krunker":
+                creator1 = "krunker.io"
+                break;
+            case "jon":
+                creator1 = "jonschmiddy"
+                break;
+            case "spy":
+                creator1 = "ispy"
+                break;
+            case "blitz":
+            case "blitz-.":
+                creator1 = "blitz-.";
+                creator2 = "blitz";
+                break;
+            case "halloluke":
+                creator1 = "halloluke0201";
+                break;
+            case "irizu":
+            case "_irizu":
+                creator1 = "_irizu"
+                creator2 = "irizu"
+                break;
+            case "vx_bomb":
+                creator1 = "vx bomb"
+                break;
+            case "electrode":
+            case "electrode_":
+                creator1 = "electrode";
+                creator2 = "electrode_";
+                break;
+            case "float":
+                creator1 = "floatingpoint"
+                break;
+            case "kltter":
+            case "kitter":
+                creator1 = "kitter";
+                creator2 = "kltter"
+                break;
+            case "zino":
+            case "zinoob":
+                creator1 = "zino";
+                creator2 = "zinoob";
+                break;
+            case "jhonxay":
+            case "jhonxay_playz":
+                creator1 = "jhonxay";
+                creator2 = "jhonxay_playz";
+                break;
+            case "omar":
+                creator1 = "0mar"
+                break;
+            case "porg":
+                creator1 = "edibleporg"
+                break;
+            case "nightlybuild":
+                creator1 = "nightly-build7"
+                break;
         }
 
         while (itemNum < arrayLength) {
@@ -180,6 +189,10 @@ function getUrlBySkinName(skinName, itemNum2) {
         t = skins[itemNum]
         if (!t.midT == false || t.midT == 0) t.midT = t.midT.toString()
     }
+    /*
+    return "https://assets.krunker.io" + ("/textures/" + (t.type && 4 == t.type ? "sprays/" + t.id : "previews/" + (t.type && (3 > t.type || 5 == t.type) ? "cosmetics/" + t.type + "_" + t.id + (t.tex ? "_" + t.tex : "") : types[t.type || 0] + (t.type && 3 == t.type ? t.id + (null == t.pat ? null == t.tex ? "" : "_" + t.tex : "_c" + t.pat) : (t.weapon || 0) + "_" + (null == t.mid ? null == t.pat ? t.tex ? t.tex : t.id : "c" + t.pat : "m" + t.mid + (null == t.midT ? "" : "_" + t.midT.split("_").slice(-1)[0]))))) + ".png")
+    is from https://krunker.io/social.html, I did not code this
+    */
     return "https://assets.krunker.io" + ("/textures/" + (t.type && 4 == t.type ? "sprays/" + t.id : "previews/" + (t.type && (3 > t.type || 5 == t.type) ? "cosmetics/" + t.type + "_" + t.id + (t.tex ? "_" + t.tex : "") : types[t.type || 0] + (t.type && 3 == t.type ? t.id + (null == t.pat ? null == t.tex ? "" : "_" + t.tex : "_c" + t.pat) : (t.weapon || 0) + "_" + (null == t.mid ? null == t.pat ? t.tex ? t.tex : t.id : "c" + t.pat : "m" + t.mid + (null == t.midT ? "" : "_" + t.midT.split("_").slice(-1)[0]))))) + ".png")
 };
 
