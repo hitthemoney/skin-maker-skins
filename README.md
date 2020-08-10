@@ -4,7 +4,22 @@ A tools that gets all skins by a skin maker
 
 ## Changelog
 
-v1.3.4
+v1.3.8
+
+### Update v1.3.8
+- New Krunker Update, so new skins.
+- Better Code
+
+### Update v1.3.7
+- New Krunker Update, so again new skins.
+
+### Update v1.3.6
+- New Krunker Update, so new skins.
+
+### Update v1.3.5
+- Added the creator "Everyone" (Onclick it redirects to https://yee.how/item-list)
+- Fixed canvas
+- Fixed: if you had more than 18 skins in the game, before it would not display them well on canvas.
 
 ### Update v1.3.4
 - Added season 3 skins
