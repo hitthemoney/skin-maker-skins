@@ -13439,4 +13439,6 @@ skins[984].creator = "Kitter",
     skins[1403].creator = "FlowerKid",
     skins[303].creator = "Hoodgail",
     skins[290].creator = "Hoodgail",
-    skins[289].creator = "Hoodgail";
+    skins[289].creator = "Hoodgail",
+    skins[1724].creator = "FlowerKid",
+    skins[1725].creator = "FlowerKid";
