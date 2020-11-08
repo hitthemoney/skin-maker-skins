@@ -1,4 +1,4 @@
-v1.3.8
+v1.3.9
 
 Update v1.3.9
 - New skins
